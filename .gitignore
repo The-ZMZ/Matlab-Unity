@@ -1,0 +1,35 @@
+
+# Unity generated folders
+Unity/CleanMyRoom/Library/
+Unity/CleanMyRoom/Temp/
+Unity/CleanMyRoom/Obj/
+Unity/CleanMyRoom/Logs/
+Unity/CleanMyRoom/UserSettings/
+Unity/CleanMyRoom/MemoryCaptures/
+Unity/CleanMyRoom/Recordings/
+
+# Unity generated files
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# MATLAB temporary files
+*.asv
+*.m~
+*.autosave
+
+# MATLAB generated folders
+**/slprj/
+**/codegen/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+.idea/
