@@ -1,0 +1,38 @@
+Issue #010 - real Unity OBJ import diagnostic
+Unity version: 6000.6.5f1
+Project: D:\Matlab-Unity
+Source: D:\Matlab-Unity\Shared_Data\Meshes\Issue010
+
+=== MATLAB Z-up (Issue010_Box_MATLAB.obj) ===
+object name       : Issue010_Box_MATLAB
+vertexCount       : 8
+triangles.Length  : 36
+normals.Length    : 8
+bounds.center     : [-1.000000, 2.000000, 3.000000]
+bounds.size       : [2.000000, 3.000000, 5.000000]
+  v[0] = [0.000000, 0.500000, 5.500000]  n[0] = [0.789474, -0.526316, 0.315790]
+  v[1] = [0.000000, 3.500000, 5.500000]  n[1] = [0.789474, 0.526316, 0.315790]
+  v[2] = [-2.000000, 3.500000, 5.500000]  n[2] = [-0.789474, 0.526316, 0.315790]
+  v[3] = [0.000000, 3.500000, 0.500000]  n[3] = [0.789474, 0.526316, -0.315790]
+min outward dot   : 0.768417
+material          : CleanMyRoom_box
+  _Color          : [0.484529, 0.767376, 0.954687, 1.000000]
+
+=== Unity Y-up (Issue010_Box_Unity.obj) ===
+object name       : Issue010_Box_Unity
+vertexCount       : 8
+triangles.Length  : 36
+normals.Length    : 8
+bounds.center     : [-1.000000, 3.000000, 2.000000]
+bounds.size       : [2.000000, 5.000000, 3.000000]
+  v[0] = [0.000000, 5.500000, 3.500000]  n[0] = [0.789474, 0.315790, 0.526316]
+  v[1] = [0.000000, 5.500000, 0.500000]  n[1] = [0.789474, 0.315790, -0.526316]
+  v[2] = [-2.000000, 5.500000, 0.500000]  n[2] = [-0.789474, 0.315790, -0.526316]
+  v[3] = [0.000000, 0.500000, 0.500000]  n[3] = [0.789474, -0.315790, -0.526316]
+min outward dot   : 0.768417
+material          : CleanMyRoom_box
+  _Color          : [0.484529, 0.767376, 0.954687, 1.000000]
+
+RESULT: COMPLETED
+
+Report written: D:\Matlab-Unity\Deliverables\Reports\Issue010_Unity_Import_Result.txt
