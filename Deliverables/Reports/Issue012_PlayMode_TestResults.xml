@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.3702441">
+  <test-suite type="TestSuite" id="1018" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.370244" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1022" name="CleanMyRoom.Tests.BedroomEnvironment.PlayMode.dll" fullname="D:/Matlab-Unity/Unity/CleanMyRoom/Library/ScriptAssemblies/CleanMyRoom.Tests.BedroomEnvironment.PlayMode.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.202455" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="31492" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1023" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.201173" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1024" name="Tests" fullname="CleanMyRoom.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.200191" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1025" name="BedroomEnvironment" fullname="CleanMyRoom.Tests.BedroomEnvironment" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.199099" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1019" name="BedroomEnvironmentPlayModeTests" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentPlayModeTests" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentPlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.195869" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1020" name="BedroomLoadsThroughSceneLoaderWithEnvironmentIntact" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentPlayModeTests.BedroomLoadsThroughSceneLoaderWithEnvironmentIntact" methodname="BedroomLoadsThroughSceneLoaderWithEnvironmentIntact" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentPlayModeTests" runstate="Runnable" seed="2027716958" result="Passed" start-time="2026-11-18 21:55:53Z" end-time="2026-11-18 21:55:54Z" duration="0.160584" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1021" name="MatlabImportedObjectsRenderWithMaterialsAtRuntime" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentPlayModeTests.MatlabImportedObjectsRenderWithMaterialsAtRuntime" methodname="MatlabImportedObjectsRenderWithMaterialsAtRuntime" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentPlayModeTests" runstate="Runnable" seed="1217478227" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.006000" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1029" name="CleanMyRoom.Tests.PlayMode.dll" fullname="D:/Matlab-Unity/Unity/CleanMyRoom/Library/ScriptAssemblies/CleanMyRoom.Tests.PlayMode.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.150780" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="31492" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1030" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.149652" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1031" name="Tests" fullname="CleanMyRoom.Tests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.148846" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1032" name="PlayMode" fullname="CleanMyRoom.Tests.PlayMode" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.148143" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1026" name="GameManagerPersistencePlayModeTests" fullname="CleanMyRoom.Tests.PlayMode.GameManagerPersistencePlayModeTests" classname="CleanMyRoom.Tests.PlayMode.GameManagerPersistencePlayModeTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.147397" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1028" name="DuplicateGameManagerIsRemovedAtRuntime" fullname="CleanMyRoom.Tests.PlayMode.GameManagerPersistencePlayModeTests.DuplicateGameManagerIsRemovedAtRuntime" methodname="DuplicateGameManagerIsRemovedAtRuntime" classname="CleanMyRoom.Tests.PlayMode.GameManagerPersistencePlayModeTests" runstate="Runnable" seed="1877761067" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.012308" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[[GameManager] Duplicate GameManager removed.
+]]></output>
+              </test-case>
+              <test-case id="1027" name="GameManagerSurvivesSceneLoadsInPersistentScene" fullname="CleanMyRoom.Tests.PlayMode.GameManagerPersistencePlayModeTests.GameManagerSurvivesSceneLoadsInPersistentScene" methodname="GameManagerSurvivesSceneLoadsInPersistentScene" classname="CleanMyRoom.Tests.PlayMode.GameManagerPersistencePlayModeTests" runstate="Runnable" seed="269357778" result="Passed" start-time="2026-11-18 21:55:54Z" end-time="2026-11-18 21:55:54Z" duration="0.130006" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/zhraa mohsin/AppData/LocalLow/DefaultCompany/CleanMyRoom\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

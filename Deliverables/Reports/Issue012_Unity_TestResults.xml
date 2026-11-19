@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="42" result="Passed" total="42" passed="41" failed="0" inconclusive="0" skipped="1" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:31Z" duration="3.1243329">
+  <test-suite type="TestSuite" id="1000" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="42" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:31Z" duration="3.124333" total="42" passed="41" failed="0" inconclusive="0" skipped="1" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1008" name="CleanMyRoom.Tests.BedroomEnvironment.dll" fullname="D:/Matlab-Unity/Unity/CleanMyRoom/Library/ScriptAssemblies/CleanMyRoom.Tests.BedroomEnvironment.dll" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:28Z" duration="0.390074" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20848" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1009" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:28Z" duration="0.388806" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1010" name="Tests" fullname="CleanMyRoom.Tests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:28Z" duration="0.388294" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1011" name="BedroomEnvironment" fullname="CleanMyRoom.Tests.BedroomEnvironment" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:28Z" duration="0.387673" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="BedroomEnvironmentTests" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:28Z" duration="0.384870" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1007" name="AllBedroomMaterialsAndPrefabAssetsExist" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests.AllBedroomMaterialsAndPrefabAssetsExist" methodname="AllBedroomMaterialsAndPrefabAssetsExist" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" seed="1208139672" result="Passed" start-time="2026-11-18 21:55:27Z" end-time="2026-11-18 21:55:28Z" duration="0.101947" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="BedroomSceneAssetExistsAndPreservesArchitecture" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests.BedroomSceneAssetExistsAndPreservesArchitecture" methodname="BedroomSceneAssetExistsAndPreservesArchitecture" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" seed="115903296" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.084601" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="MatlabGeneratedMeshesAreImportedAndUsedInScene" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests.MatlabGeneratedMeshesAreImportedAndUsedInScene" methodname="MatlabGeneratedMeshesAreImportedAndUsedInScene" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" seed="1429641584" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.057860" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1006" name="NavigationWaypointsAreNotBlockedByFurniture" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests.NavigationWaypointsAreNotBlockedByFurniture" methodname="NavigationWaypointsAreNotBlockedByFurniture" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" seed="533255858" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.030106" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="RequiredEnvironmentElementsExistWithValidTransforms" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests.RequiredEnvironmentElementsExistWithValidTransforms" methodname="RequiredEnvironmentElementsExistWithValidTransforms" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" seed="1877996257" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.029759" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="RequiredFurnitureExistsWithReasonableDimensionsAndColliders" fullname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests.RequiredFurnitureExistsWithReasonableDimensionsAndColliders" methodname="RequiredFurnitureExistsWithReasonableDimensionsAndColliders" classname="CleanMyRoom.Tests.BedroomEnvironment.BedroomEnvironmentTests" runstate="Runnable" seed="1817497482" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.038953" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1042" name="CleanMyRoom.Tests.Editor.dll" fullname="D:/Matlab-Unity/Unity/CleanMyRoom/Library/ScriptAssemblies/CleanMyRoom.Tests.Editor.dll" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:30Z" duration="2.653538" total="26" passed="25" failed="0" inconclusive="0" skipped="1" asserts="0">
+      <properties>
+        <property name="_PID" value="20848" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1043" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:30Z" duration="2.649739" total="26" passed="25" failed="0" inconclusive="0" skipped="1" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1044" name="Tests" fullname="CleanMyRoom.Tests" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:30Z" duration="2.648485" total="26" passed="25" failed="0" inconclusive="0" skipped="1" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1012" name="JsonCodecTests" fullname="CleanMyRoom.Tests.JsonCodecTests" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.019313" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1018" name="DecodesActivityResultAndProgressArray" fullname="CleanMyRoom.Tests.JsonCodecTests.DecodesActivityResultAndProgressArray" methodname="DecodesActivityResultAndProgressArray" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="573578507" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.003697" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1019" name="DecodesError" fullname="CleanMyRoom.Tests.JsonCodecTests.DecodesError" methodname="DecodesError" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="45844150" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.000453" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="DecodesPlaceResponseWithPosition" fullname="CleanMyRoom.Tests.JsonCodecTests.DecodesPlaceResponseWithPosition" methodname="DecodesPlaceResponseWithPosition" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="255658684" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.002704" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1016" name="DecodesPong" fullname="CleanMyRoom.Tests.JsonCodecTests.DecodesPong" methodname="DecodesPong" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="43643854" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.000581" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1013" name="EncodesPingRequest" fullname="CleanMyRoom.Tests.JsonCodecTests.EncodesPingRequest" methodname="EncodesPingRequest" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="891455076" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.001414" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="EncodesPlaceRequestWithNestedPosition" fullname="CleanMyRoom.Tests.JsonCodecTests.EncodesPlaceRequestWithNestedPosition" methodname="EncodesPlaceRequestWithNestedPosition" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="1349789579" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.000887" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="EscapesQuotesInRequestFields" fullname="CleanMyRoom.Tests.JsonCodecTests.EscapesQuotesInRequestFields" methodname="EscapesQuotesInRequestFields" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="1863463104" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.000283" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1020" name="IgnoresUnknownFields" fullname="CleanMyRoom.Tests.JsonCodecTests.IgnoresUnknownFields" methodname="IgnoresUnknownFields" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="28151444" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.000349" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1022" name="RejectsEmptyMessage" fullname="CleanMyRoom.Tests.JsonCodecTests.RejectsEmptyMessage" methodname="RejectsEmptyMessage" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="1654433154" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.001233" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1021" name="RejectsMalformedJson" fullname="CleanMyRoom.Tests.JsonCodecTests.RejectsMalformedJson" methodname="RejectsMalformedJson" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="2014055005" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.001680" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1023" name="RejectsMissingType" fullname="CleanMyRoom.Tests.JsonCodecTests.RejectsMissingType" methodname="RejectsMissingType" classname="CleanMyRoom.Tests.JsonCodecTests" runstate="Runnable" seed="87527077" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:28Z" duration="0.000379" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1024" name="MeshImportTests" fullname="CleanMyRoom.Tests.MeshImportTests" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:30Z" duration="2.604798" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1027" name="ImportsAllVerticesTrianglesAndNormals" fullname="CleanMyRoom.Tests.MeshImportTests.ImportsAllVerticesTrianglesAndNormals" methodname="ImportsAllVerticesTrianglesAndNormals" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="1579608803" result="Passed" start-time="2026-11-18 21:55:28Z" end-time="2026-11-18 21:55:29Z" duration="1.364711" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1028" name="ImportsDocumentedPhongMaterial" fullname="CleanMyRoom.Tests.MeshImportTests.ImportsDocumentedPhongMaterial" methodname="ImportsDocumentedPhongMaterial" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="1566836730" result="Passed" start-time="2026-11-18 21:55:29Z" end-time="2026-11-18 21:55:30Z" duration="0.317450" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1026" name="MatlabVariantKeepsZUpDimensions" fullname="CleanMyRoom.Tests.MeshImportTests.MatlabVariantKeepsZUpDimensions" methodname="MatlabVariantKeepsZUpDimensions" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="2133016411" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.289438" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1029" name="ObjFilesUseDocumentedAxisConventions" fullname="CleanMyRoom.Tests.MeshImportTests.ObjFilesUseDocumentedAxisConventions" methodname="ObjFilesUseDocumentedAxisConventions" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="1213119061" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.302798" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1025" name="UnityVariantImportsWithDocumentedDimensionsAndOrientation" fullname="CleanMyRoom.Tests.MeshImportTests.UnityVariantImportsWithDocumentedDimensionsAndOrientation" methodname="UnityVariantImportsWithDocumentedDimensionsAndOrientation" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="566082804" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.324512" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Imported Unity bounds: centre [-1.0000, 3.0000, 2.0000], size [2.0000, 5.0000, 3.0000]
+]]></output>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1030" name="MessageFramerTests" fullname="CleanMyRoom.Tests.MessageFramerTests" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.015050" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1037" name="DropsOversizedLineAndKeepsFollowingMessages" fullname="CleanMyRoom.Tests.MessageFramerTests.DropsOversizedLineAndKeepsFollowingMessages" methodname="DropsOversizedLineAndKeepsFollowingMessages" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="1498229333" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.005115" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1038" name="DropsUnboundedBufferAndRecovers" fullname="CleanMyRoom.Tests.MessageFramerTests.DropsUnboundedBufferAndRecovers" methodname="DropsUnboundedBufferAndRecovers" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="416335262" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000678" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1032" name="EmitsMultipleMessagesFromOnePacket" fullname="CleanMyRoom.Tests.MessageFramerTests.EmitsMultipleMessagesFromOnePacket" methodname="EmitsMultipleMessagesFromOnePacket" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="824057199" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000429" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1031" name="EmitsSingleCompleteMessage" fullname="CleanMyRoom.Tests.MessageFramerTests.EmitsSingleCompleteMessage" methodname="EmitsSingleCompleteMessage" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="1562923452" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000669" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1035" name="IgnoresBlankKeepAliveLines" fullname="CleanMyRoom.Tests.MessageFramerTests.IgnoresBlankKeepAliveLines" methodname="IgnoresBlankKeepAliveLines" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="1073348785" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000504" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1033" name="ReassemblesMessageSplitAcrossManyReads" fullname="CleanMyRoom.Tests.MessageFramerTests.ReassemblesMessageSplitAcrossManyReads" methodname="ReassemblesMessageSplitAcrossManyReads" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="1988025925" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000587" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1036" name="ReassemblesUtf8CharacterSplitAcrossReads" fullname="CleanMyRoom.Tests.MessageFramerTests.ReassemblesUtf8CharacterSplitAcrossReads" methodname="ReassemblesUtf8CharacterSplitAcrossReads" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="1174878138" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000573" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1039" name="ResetDiscardsPartialMessage" fullname="CleanMyRoom.Tests.MessageFramerTests.ResetDiscardsPartialMessage" methodname="ResetDiscardsPartialMessage" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="1790904296" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000808" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1034" name="StripsCarriageReturnFromCrLf" fullname="CleanMyRoom.Tests.MessageFramerTests.StripsCarriageReturnFromCrLf" methodname="StripsCarriageReturnFromCrLf" classname="CleanMyRoom.Tests.MessageFramerTests" runstate="Runnable" seed="154714900" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.000481" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="1040" name="NetworkIntegrationTests" fullname="CleanMyRoom.Tests.NetworkIntegrationTests" classname="CleanMyRoom.Tests.NetworkIntegrationTests" runstate="Explicit" testcasecount="1" result="Skipped" label="Explicit" site="SetUp" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.006784" total="1" passed="0" failed="0" inconclusive="0" skipped="1" asserts="0">
+            <properties>
+              <property name="_SKIPREASON" value="Requires the MATLAB server on 127.0.0.1:55001 with the test fixture loaded." />
+              <property name="Category" value="Integration" />
+            </properties>
+            <reason>
+              <message><![CDATA[Requires the MATLAB server on 127.0.0.1:55001 with the test fixture loaded.]]></message>
+            </reason>
+            <test-case id="1041" name="ConnectsPingsPlacesAndReconnects" fullname="CleanMyRoom.Tests.NetworkIntegrationTests.ConnectsPingsPlacesAndReconnects" methodname="ConnectsPingsPlacesAndReconnects" classname="CleanMyRoom.Tests.NetworkIntegrationTests" runstate="Runnable" seed="2107812295" result="Skipped" label="Explicit" site="Parent" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="0.000000" asserts="0">
+              <properties />
+              <reason>
+                <message><![CDATA[Requires the MATLAB server on 127.0.0.1:55001 with the test fixture loaded.]]></message>
+              </reason>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+    <test-suite type="Assembly" id="1056" name="CleanMyRoom.Tests.SceneArchitecture.dll" fullname="D:/Matlab-Unity/Unity/CleanMyRoom/Library/ScriptAssemblies/CleanMyRoom.Tests.SceneArchitecture.dll" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:31Z" duration="0.062290" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20848" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1057" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:31Z" duration="0.061625" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1058" name="Tests" fullname="CleanMyRoom.Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:31Z" duration="0.061199" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1059" name="SceneArchitecture" fullname="CleanMyRoom.Tests.SceneArchitecture" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:31Z" duration="0.060661" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1045" name="SceneArchitectureTests" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:31Z" duration="0.059865" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1051" name="ActiveSceneComparisonPreventsUnnecessaryReloads" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.ActiveSceneComparisonPreventsUnnecessaryReloads" methodname="ActiveSceneComparisonPreventsUnnecessaryReloads" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="1139656630" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:30Z" duration="0.002744" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1046" name="AllSixScenesExistAsValidUnitySceneAssets" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.AllSixScenesExistAsValidUnitySceneAssets" methodname="AllSixScenesExistAsValidUnitySceneAssets" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="2010402072" result="Passed" start-time="2026-11-18 21:55:30Z" end-time="2026-11-18 21:55:31Z" duration="0.027890" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1048" name="BuildSettingsEnableAllSixScenesWithMainMenuFirst" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.BuildSettingsEnableAllSixScenesWithMainMenuFirst" methodname="BuildSettingsEnableAllSixScenesWithMainMenuFirst" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="332718638" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.003463" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1052" name="GameManagerRegistrationKeepsOneInstance" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.GameManagerRegistrationKeepsOneInstance" methodname="GameManagerRegistrationKeepsOneInstance" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="295425809" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.008150" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[[GameManager] Duplicate GameManager removed.
+]]></output>
+              </test-case>
+              <test-case id="1053" name="GameManagerUnregisterClearsStaticReference" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.GameManagerUnregisterClearsStaticReference" methodname="GameManagerUnregisterClearsStaticReference" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="1054233077" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.000670" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1054" name="PersistenceRequiresAnUnparentedRootObject" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.PersistenceRequiresAnUnparentedRootObject" methodname="PersistenceRequiresAnUnparentedRootObject" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="1105031034" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.003914" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1049" name="RegisteredSceneNamesResolveToBuildIndices" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.RegisteredSceneNamesResolveToBuildIndices" methodname="RegisteredSceneNamesResolveToBuildIndices" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="968130864" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.001338" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1055" name="SceneChangedEventReportsLoadedScene" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.SceneChangedEventReportsLoadedScene" methodname="SceneChangedEventReportsLoadedScene" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="286824700" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.001655" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1047" name="SceneMetaGuidsAreUniqueAndPresentInBuildSettings" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.SceneMetaGuidsAreUniqueAndPresentInBuildSettings" methodname="SceneMetaGuidsAreUniqueAndPresentInBuildSettings" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="633305760" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.004148" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1050" name="UnknownSceneNamesAreRejectedWithMeaningfulErrors" fullname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests.UnknownSceneNamesAreRejectedWithMeaningfulErrors" methodname="UnknownSceneNamesAreRejectedWithMeaningfulErrors" classname="CleanMyRoom.Tests.SceneArchitecture.SceneArchitectureTests" runstate="Runnable" seed="226505127" result="Passed" start-time="2026-11-18 21:55:31Z" end-time="2026-11-18 21:55:31Z" duration="0.001044" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: C:/Users/zhraa mohsin/AppData/LocalLow/DefaultCompany/CleanMyRoom\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
