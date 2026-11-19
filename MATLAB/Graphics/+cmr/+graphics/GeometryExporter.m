@@ -1,0 +1,380 @@
+classdef GeometryExporter
+%GEOMETRYEXPORTER Export Issue #007 meshes as Unity-compatible OBJ and MTL.
+%
+%   Issue #007 already provides Mesh3D.EXPORTOBJ for plain triangle geometry.
+%   This class adds the Issue #010 requirements on top of that work: vertex
+%   colours, the supported Phong material fields, vertex normals and an
+%   optional Unity axis conversion. It does not change Mesh3D or any earlier
+%   class.
+%
+%   Coordinate systems
+%   ------------------
+%   "matlab" (default) keeps the Z-up right-handed coordinates used by the
+%   mesh classes. "unity" remaps (x, y, z) MATLAB to (x, z, y) Unity: MATLAB's
+%   +z becomes Unity's up axis (+y) and MATLAB's +y becomes Unity's forward
+%   axis (+z). That remap is a reflection, so face winding is reversed to keep
+%   computed normals pointing away from the object.
+%
+%   Files written
+%   -------------
+%   <name>.obj   triangulated geometry, optional vertex colours and normals
+%   <name>.mtl   optional Ka/Kd/Ks/Ns/d/illum material description
+%
+%   The OBJ subset written here is intentionally small so it is easy to read
+%   and safe to import: "o", "mtllib", "usemtl", "v", "vn" and "f a//a" lines.
+%
+%   Example:
+%       cube = cmr.graphics.Cube3D.create(2, [0 0 0], [0.2 0.55 0.9]);
+%       material = cmr.graphics.Material3D.fromColor('Cube paint', cube.color);
+%       result = cmr.graphics.GeometryExporter.export( ...
+%           cube, 'Shared_Data/Meshes/Issue010/cube.obj', ...
+%           'Material', material, 'CoordinateSystem', 'unity');
+
+    methods (Static)
+        function outputs = export(mesh, filePath, options)
+            %EXPORT Write OBJ geometry and its optional MTL material file.
+            %
+            %   outputs = GeometryExporter.export(mesh, filePath, options)
+            %
+            %   Name-value options:
+            %       Material          cmr.graphics.Material3D (default: derive
+            %                         one from mesh.color)
+            %       CoordinateSystem  "matlab" (default) or "unity"
+            %       WriteNormals      write vn lines (default true)
+            %       WriteColors       write RGB after each v line (default true)
+            %       WriteMaterial     write a matching .mtl file (default true)
+            %
+            %   OUTPUTS is a struct with OBJPATH, MTLPATH, VERTEXCOUNT,
+            %   FACECOUNT and COORDINATESYSTEM fields.
+            arguments
+                mesh
+                filePath
+                options.Material = []
+                options.CoordinateSystem (1,1) string = "matlab"
+                options.WriteNormals (1,1) logical = true
+                options.WriteColors (1,1) logical = true
+                options.WriteMaterial (1,1) logical = true
+            end
+
+            cmr.graphics.GeometryExporter.checkMesh(mesh);
+
+            if ~(ischar(filePath) || (isstring(filePath) && isscalar(filePath)))
+                error('cmr:graphics:GeometryExporter:invalidFilePath', ...
+                    'OBJ destination must be a character vector or string scalar.');
+            end
+            filePath = string(filePath);
+            if strlength(filePath) == 0
+                error('cmr:graphics:GeometryExporter:invalidFilePath', ...
+                    'OBJ destination must not be empty.');
+            end
+
+            [folderPath, baseName, extension] = fileparts(filePath);
+            if ~strcmpi(extension, '.obj')
+                baseName = baseName + extension;
+                filePath = fullfile(folderPath, baseName + ".obj");
+            end
+            if strlength(folderPath) > 0 && ~isfolder(folderPath)
+                mkdir(folderPath);
+            end
+
+            systemName = cmr.graphics.GeometryExporter.parseCoordinateSystem( ...
+                options.CoordinateSystem);
+
+            if isempty(options.Material)
+                material = cmr.graphics.Material3D.fromColor( ...
+                    mesh.name + " material", mesh.color);
+            else
+                material = options.Material;
+                cmr.graphics.LightingModel.checkMaterial(material);
+            end
+
+            workingMesh = cmr.graphics.GeometryExporter.convertMesh( ...
+                mesh, systemName);
+            triangles = cmr.graphics.Mesh3D.triangulate(workingMesh);
+            normals = cmr.graphics.SurfaceNormals.outwardVertexNormals( ...
+                workingMesh);
+
+            objectName = cmr.graphics.GeometryExporter.safeName(mesh.name);
+            materialName = cmr.graphics.GeometryExporter.safeName(material.name);
+            mtlFileName = string(baseName) + ".mtl";
+
+            fileID = fopen(char(filePath), 'w');
+            if fileID == -1
+                error('cmr:graphics:GeometryExporter:exportFailed', ...
+                    'Could not open %s for writing.', filePath);
+            end
+            cleanup = onCleanup(@() fclose(fileID)); %#ok<NASGU>
+
+            fprintf(fileID, '# Clean My Room - Issue #010\n');
+            fprintf(fileID, '# Generated by cmr.graphics.GeometryExporter\n');
+            fprintf(fileID, '# Coordinate system: %s (x, y, z)\n', systemName);
+            if options.WriteMaterial
+                fprintf(fileID, 'mtllib %s\n', mtlFileName);
+            end
+            fprintf(fileID, 'o %s\n', objectName);
+            fprintf(fileID, '# %d vertices, %d triangles\n', ...
+                workingMesh.vertexCount, size(triangles, 1));
+
+            if options.WriteColors
+                colors = repmat(double(mesh.color), workingMesh.vertexCount, 1);
+                for index = 1:workingMesh.vertexCount
+                    fprintf(fileID, 'v %.10g %.10g %.10g %.10g %.10g %.10g\n', ...
+                        workingMesh.vertices(index, 1), ...
+                        workingMesh.vertices(index, 2), ...
+                        workingMesh.vertices(index, 3), ...
+                        colors(index, 1), colors(index, 2), colors(index, 3));
+                end
+            else
+                fprintf(fileID, 'v %.10g %.10g %.10g\n', ...
+                    workingMesh.vertices.');
+            end
+
+            if options.WriteNormals
+                fprintf(fileID, 'vn %.10g %.10g %.10g\n', normals.');
+            end
+
+            if options.WriteMaterial
+                fprintf(fileID, 'usemtl %s\n', materialName);
+            end
+
+            for index = 1:size(triangles, 1)
+                face = triangles(index, :);
+                if options.WriteNormals
+                    fprintf(fileID, 'f %d//%d %d//%d %d//%d\n', ...
+                        face(1), face(1), face(2), face(2), face(3), face(3));
+                else
+                    fprintf(fileID, 'f %d %d %d\n', face(1), face(2), face(3));
+                end
+            end
+
+            mtlPath = "";
+            if options.WriteMaterial
+                mtlPath = cmr.graphics.GeometryExporter.writeMaterial( ...
+                    material, folderPath, char(baseName) + ".mtl", materialName);
+            end
+
+            outputs = struct();
+            outputs.objPath = string(filePath);
+            outputs.mtlPath = mtlPath;
+            outputs.vertexCount = workingMesh.vertexCount;
+            outputs.faceCount = size(triangles, 1);
+            outputs.coordinateSystem = systemName;
+        end
+
+        function converted = convertMesh(mesh, targetSystem)
+            %CONVERTMESH Remap a mesh into the requested coordinate system.
+            %
+            %   "matlab" returns an equivalent validated mesh unchanged.
+            %   "unity" maps vertices (x,y,z) -> (x,z,y), reverses every face
+            %   and converts parameters.center when that field exists.
+            cmr.graphics.GeometryExporter.checkMesh(mesh);
+            systemName = cmr.graphics.GeometryExporter.parseCoordinateSystem( ...
+                targetSystem);
+
+            if systemName == "matlab"
+                converted = mesh;
+                return;
+            end
+
+            vertices = double(mesh.vertices(:, [1, 3, 2]));
+            faces = cell(1, numel(mesh.faces));
+            for index = 1:numel(mesh.faces)
+                faces{index} = fliplr(mesh.faces{index});
+            end
+
+            parameters = mesh.parameters;
+            if isfield(parameters, 'center')
+                center = parameters.center;
+                if isnumeric(center) && isreal(center) && numel(center) == 3 ...
+                        && all(isfinite(center(:)))
+                    parameters.center = double(center([1, 3, 2]));
+                end
+            end
+
+            converted = cmr.graphics.Mesh3D.create( ...
+                mesh.name, vertices, faces, mesh.color, parameters);
+        end
+
+        function data = readOBJ(filePath)
+            %READOBJ Read the small OBJ subset produced by this class.
+            %
+            %   This helper exists so tests and the demo can verify an export
+            %   without a toolbox. It is not a general-purpose OBJ parser.
+            %
+            %   DATA has fields OBJECTNAME, MATERIALNAME, MATERIALFILE,
+            %   VERTICES (N-by-3), VERTEXCOLORS (N-by-3 or empty), NORMALS
+            %   (N-by-3 or empty) and FACES (M-by-3).
+            if ~(ischar(filePath) || (isstring(filePath) && isscalar(filePath)))
+                error('cmr:graphics:GeometryExporter:invalidFilePath', ...
+                    'OBJ source must be a character vector or string scalar.');
+            end
+            filePath = string(filePath);
+            if ~isfile(filePath)
+                error('cmr:graphics:GeometryExporter:fileNotFound', ...
+                    'OBJ file does not exist: %s', filePath);
+            end
+
+            lines = splitlines(string(fileread(char(filePath))));
+            vertices = zeros(0, 3);
+            vertexColors = zeros(0, 3);
+            normals = zeros(0, 3);
+            faces = zeros(0, 3);
+            objectName = "";
+            materialName = "";
+            materialFile = "";
+
+            for lineIndex = 1:numel(lines)
+                line = strtrim(lines(lineIndex));
+                if strlength(line) == 0 || line.startsWith("#")
+                    continue;
+                end
+                parts = split(line);
+                keyword = parts(1);
+                values = parts(2:end);
+
+                switch lower(char(keyword))
+                    case 'o'
+                        objectName = strjoin(cellstr(values'), ' ');
+                    case 'usemtl'
+                        materialName = strjoin(cellstr(values'), ' ');
+                    case 'mtllib'
+                        materialFile = strjoin(cellstr(values'), ' ');
+                    case 'v'
+                        numbers = str2double(values);
+                        if numel(numbers) < 3 || any(isnan(numbers(1:3)))
+                            error('cmr:graphics:GeometryExporter:invalidOBJ', ...
+                                'Invalid vertex on line %d of %s.', ...
+                                lineIndex, filePath);
+                        end
+                        vertices(end + 1, :) = numbers(1:3); %#ok<AGROW>
+                        if numel(numbers) >= 6 && ~any(isnan(numbers(4:6)))
+                            vertexColors(end + 1, :) = numbers(4:6); %#ok<AGROW>
+                        end
+                    case 'vn'
+                        numbers = str2double(values);
+                        if numel(numbers) < 3 || any(isnan(numbers(1:3)))
+                            error('cmr:graphics:GeometryExporter:invalidOBJ', ...
+                                'Invalid normal on line %d of %s.', ...
+                                lineIndex, filePath);
+                        end
+                        normals(end + 1, :) = numbers(1:3); %#ok<AGROW>
+                    case 'f'
+                        if numel(values) ~= 3
+                            error('cmr:graphics:GeometryExporter:invalidOBJ', ...
+                                ['Only triangulated faces are supported ' ...
+                                 '(line %d of %s).'], lineIndex, filePath);
+                        end
+                        indices = zeros(1, 3);
+                        for corner = 1:3
+                            fields = split(values(corner), '/');
+                            index = str2double(fields(1));
+                            if isnan(index) || index < 1 ...
+                                    || index ~= round(index)
+                                error('cmr:graphics:GeometryExporter:invalidOBJ', ...
+                                    'Invalid face index on line %d of %s.', ...
+                                    lineIndex, filePath);
+                            end
+                            indices(corner) = index;
+                        end
+                        faces(end + 1, :) = indices; %#ok<AGROW>
+                end
+            end
+
+            if isempty(vertices) || isempty(faces)
+                error('cmr:graphics:GeometryExporter:invalidOBJ', ...
+                    'OBJ file contains no vertices or no faces: %s', filePath);
+            end
+
+            data = struct();
+            data.objectName = objectName;
+            data.materialName = materialName;
+            data.materialFile = materialFile;
+            data.vertices = vertices;
+            data.vertexColors = vertexColors;
+            data.normals = normals;
+            data.faces = faces;
+        end
+    end
+
+    methods (Static, Access = private)
+        function mtlPath = writeMaterial(material, folderPath, baseName, name)
+            [~, bareName, ~] = fileparts(baseName);
+            mtlName = string(bareName) + ".mtl";
+            mtlPath = fullfile(folderPath, mtlName);
+
+            fileID = fopen(char(mtlPath), 'w');
+            if fileID == -1
+                error('cmr:graphics:GeometryExporter:exportFailed', ...
+                    'Could not open %s for writing.', mtlPath);
+            end
+            cleanup = onCleanup(@() fclose(fileID)); %#ok<NASGU>
+
+            fprintf(fileID, '# Clean My Room - Issue #010 material\n');
+            fprintf(fileID, 'newmtl %s\n', name);
+            fprintf(fileID, 'Ka %.10g %.10g %.10g\n', material.ambient);
+            fprintf(fileID, 'Kd %.10g %.10g %.10g\n', material.diffuse);
+            fprintf(fileID, 'Ks %.10g %.10g %.10g\n', material.specular);
+            fprintf(fileID, 'Ns %.10g\n', min(max(material.shininess, 0), 1000));
+            fprintf(fileID, 'd 1\n');
+            fprintf(fileID, 'illum 2\n');
+        end
+
+        function systemName = parseCoordinateSystem(value)
+            if isstring(value) && isscalar(value)
+                text = lower(char(value));
+            elseif ischar(value) && isrow(value)
+                text = lower(value);
+            else
+                error('cmr:graphics:GeometryExporter:invalidCoordinateSystem', ...
+                    'Coordinate system must be "matlab" or "unity".');
+            end
+
+            switch text
+                case {'matlab', 'z-up', 'zup'}
+                    systemName = "matlab";
+                case {'unity', 'y-up', 'yup'}
+                    systemName = "unity";
+                otherwise
+                    error('cmr:graphics:GeometryExporter:invalidCoordinateSystem', ...
+                        'Coordinate system must be "matlab" or "unity".');
+            end
+        end
+
+        function safe = safeName(value)
+            name = char(string(value));
+            name = regexprep(name, '\s+', '_');
+            name = regexprep(name, '[^A-Za-z0-9_\-.]', '_');
+            if isempty(name)
+                name = 'mesh';
+            end
+            safe = name;
+        end
+
+        function checkMesh(mesh)
+            required = {'name', 'vertices', 'faces', 'color', 'parameters'};
+            if ~isstruct(mesh) || ~isscalar(mesh)
+                error('cmr:graphics:GeometryExporter:invalidMesh', ...
+                    'Expected a scalar mesh struct.');
+            end
+            for index = 1:numel(required)
+                if ~isfield(mesh, required{index})
+                    error('cmr:graphics:GeometryExporter:invalidMesh', ...
+                        'Mesh struct is missing the "%s" field.', ...
+                        required{index});
+                end
+            end
+
+            cmr.graphics.SurfaceNormals.checkMesh(mesh);
+            if ~(isnumeric(mesh.color) && isreal(mesh.color) ...
+                    && numel(mesh.color) == 3 && all(isfinite(mesh.color(:))) ...
+                    && all(mesh.color(:) >= 0) && all(mesh.color(:) <= 1))
+                error('cmr:graphics:GeometryExporter:invalidMesh', ...
+                    'Mesh colour must contain three RGB components in [0, 1].');
+            end
+            if ~(isstruct(mesh.parameters) && isscalar(mesh.parameters))
+                error('cmr:graphics:GeometryExporter:invalidMesh', ...
+                    'Mesh parameters must be a scalar struct.');
+            end
+        end
+    end
+end
