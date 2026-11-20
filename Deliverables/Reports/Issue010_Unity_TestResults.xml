@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:31Z" duration="3.5950941">
+  <test-suite type="TestSuite" id="1000" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:31Z" duration="3.595094" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1031" name="CleanMyRoom.Tests.Editor.dll" fullname="D:/Matlab-Unity/Unity/CleanMyRoom/Library/ScriptAssemblies/CleanMyRoom.Tests.Editor.dll" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:31Z" duration="3.568142" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="5660" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1032" name="CleanMyRoom" fullname="CleanMyRoom" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:31Z" duration="3.556482" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1033" name="Tests" fullname="CleanMyRoom.Tests" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:31Z" duration="3.554874" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestFixture" id="1013" name="MeshImportTests" fullname="CleanMyRoom.Tests.MeshImportTests" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:31Z" duration="3.550514" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-case id="1016" name="ImportsAllVerticesTrianglesAndNormals" fullname="CleanMyRoom.Tests.MeshImportTests.ImportsAllVerticesTrianglesAndNormals" methodname="ImportsAllVerticesTrianglesAndNormals" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="53194026" result="Passed" start-time="2026-11-18 19:29:28Z" end-time="2026-11-18 19:29:30Z" duration="2.053663" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1017" name="ImportsDocumentedPhongMaterial" fullname="CleanMyRoom.Tests.MeshImportTests.ImportsDocumentedPhongMaterial" methodname="ImportsDocumentedPhongMaterial" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="1753396488" result="Passed" start-time="2026-11-18 19:29:30Z" end-time="2026-11-18 19:29:30Z" duration="0.381428" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1015" name="MatlabVariantKeepsZUpDimensions" fullname="CleanMyRoom.Tests.MeshImportTests.MatlabVariantKeepsZUpDimensions" methodname="MatlabVariantKeepsZUpDimensions" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="95453374" result="Passed" start-time="2026-11-18 19:29:30Z" end-time="2026-11-18 19:29:31Z" duration="0.365066" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1018" name="ObjFilesUseDocumentedAxisConventions" fullname="CleanMyRoom.Tests.MeshImportTests.ObjFilesUseDocumentedAxisConventions" methodname="ObjFilesUseDocumentedAxisConventions" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="1345320249" result="Passed" start-time="2026-11-18 19:29:31Z" end-time="2026-11-18 19:29:31Z" duration="0.326117" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+            </test-case>
+            <test-case id="1014" name="UnityVariantImportsWithDocumentedDimensionsAndOrientation" fullname="CleanMyRoom.Tests.MeshImportTests.UnityVariantImportsWithDocumentedDimensionsAndOrientation" methodname="UnityVariantImportsWithDocumentedDimensionsAndOrientation" classname="CleanMyRoom.Tests.MeshImportTests" runstate="Runnable" seed="7898132" result="Passed" start-time="2026-11-18 19:29:31Z" end-time="2026-11-18 19:29:31Z" duration="0.374819" asserts="0">
+              <properties>
+                <property name="retryIteration" value="0" />
+                <property name="repeatIteration" value="0" />
+              </properties>
+              <output><![CDATA[Imported Unity bounds: centre [-1.0000, 3.0000, 2.0000], size [2.0000, 5.0000, 3.0000]
+Saving results to: C:/Users/zhraa mohsin/AppData/LocalLow/DefaultCompany/CleanMyRoom\TestResults.xml
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

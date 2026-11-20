@@ -3,6 +3,10 @@
     "rootNamespace": "CleanMyRoom.Tests",
     "references": [
         "CleanMyRoom.Net",
+        "CleanMyRoom.Player",
+        "CleanMyRoom.Gameplay",
+        "Unity.InputSystem",
+        "Unity.InputSystem.TestFramework",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],

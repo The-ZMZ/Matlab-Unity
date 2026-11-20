@@ -1,0 +1,8 @@
+# Clean My Room - Issue #010 material
+newmtl CleanMyRoom_box
+Ka 0.03 0.0825 0.135
+Kd 0.2 0.55 0.9
+Ks 0.55 0.55 0.55
+Ns 48
+d 1
+illum 2

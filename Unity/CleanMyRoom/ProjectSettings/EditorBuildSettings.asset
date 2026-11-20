@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: a221bb1786014ad099bb96adfa3cc5c7
+  - enabled: 1
+    path: Assets/Scenes/Bedroom.unity
+    guid: af05300dedf79944a8663a240177f124
+  - enabled: 1
+    path: Assets/Scenes/ColorSorting.unity
+    guid: 5f31f70fad534f53b9c086b864646923
+  - enabled: 1
+    path: Assets/Scenes/TasteSorting.unity
+    guid: 51d8ee5d3159413a8bb1d233877fcdbb
+  - enabled: 1
+    path: Assets/Scenes/MathActivity.unity
+    guid: 7c6a3f86289b4f7dafc4a84aa7441ef0
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: d0477277e2964015a29327c3d2e57cb0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
