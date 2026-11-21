@@ -1,4 +1,6 @@
 ﻿<Solution>
+  <Project Path="CleanMyRoom.Player.csproj" />
+  <Project Path="CleanMyRoom.Gameplay.csproj" />
   <Project Path="CleanMyRoom.Net.csproj" />
   <Project Path="CleanMyRoom.Tests.Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />

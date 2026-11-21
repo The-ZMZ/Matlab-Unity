@@ -1,0 +1,26 @@
+{
+  "id": "COLOR",
+  "title": "Color Sorting",
+  "targets": [
+    "basket_red",
+    "basket_orange",
+    "basket_yellow",
+    "basket_green",
+    "basket_blue",
+    "basket_purple"
+  ],
+  "objects": [
+    { "id": "apple", "name": "Apple", "color": "Red", "target": "basket_red" },
+    { "id": "carrot", "name": "Carrot", "color": "Orange", "target": "basket_orange" },
+    { "id": "duck", "name": "Duck", "color": "Yellow", "target": "basket_yellow" },
+    { "id": "leaf", "name": "Leaf", "color": "Green", "target": "basket_green" },
+    { "id": "blue_car", "name": "Blue Car", "color": "Blue", "target": "basket_blue" },
+    { "id": "grapes", "name": "Grapes", "color": "Purple", "target": "basket_purple" },
+    { "id": "strawberry", "name": "Strawberry", "color": "Red", "target": "basket_red" },
+    { "id": "basketball", "name": "Basketball", "color": "Orange", "target": "basket_orange" },
+    { "id": "star", "name": "Star", "color": "Yellow", "target": "basket_yellow" },
+    { "id": "frog", "name": "Frog", "color": "Green", "target": "basket_green" },
+    { "id": "balloon", "name": "Balloon", "color": "Blue", "target": "basket_blue" },
+    { "id": "butterfly", "name": "Butterfly", "color": "Purple", "target": "basket_purple" }
+  ]
+}
