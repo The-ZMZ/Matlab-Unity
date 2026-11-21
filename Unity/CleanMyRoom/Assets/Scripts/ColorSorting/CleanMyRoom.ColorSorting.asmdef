@@ -1,0 +1,17 @@
+{
+    "name": "CleanMyRoom.ColorSorting",
+    "rootNamespace": "CleanMyRoom.ColorSorting",
+    "references": [
+        "CleanMyRoom.Core",
+        "CleanMyRoom.Net"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

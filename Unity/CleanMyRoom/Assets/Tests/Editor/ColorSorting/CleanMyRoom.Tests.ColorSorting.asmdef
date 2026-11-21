@@ -1,0 +1,26 @@
+{
+    "name": "CleanMyRoom.Tests.ColorSorting",
+    "rootNamespace": "CleanMyRoom.Tests",
+    "references": [
+        "CleanMyRoom.ColorSorting",
+        "CleanMyRoom.Core",
+        "CleanMyRoom.Net",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

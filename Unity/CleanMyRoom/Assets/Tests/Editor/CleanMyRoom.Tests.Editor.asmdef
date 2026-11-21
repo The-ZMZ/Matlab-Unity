@@ -4,14 +4,9 @@
     "references": [
         "CleanMyRoom.Core",
         "CleanMyRoom.Net",
-        "CleanMyRoom.Player",
-        "CleanMyRoom.Gameplay",
-        "CleanMyRoom.UI",
-        "Unity.InputSystem",
-        "Unity.InputSystem.TestFramework",
+        "CleanMyRoom.ColorSorting",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner",
-        "UnityEngine.UI"
+        "UnityEditor.TestRunner"
     ],
     "includePlatforms": [
         "Editor"

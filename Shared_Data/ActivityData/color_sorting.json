@@ -1,0 +1,26 @@
+{
+  "id": "COLOR",
+  "title": "Color Sorting",
+  "objects": [
+    { "id": "object_01", "target": "basket_red" },
+    { "id": "object_02", "target": "basket_red" },
+    { "id": "object_03", "target": "basket_blue" },
+    { "id": "object_04", "target": "basket_blue" },
+    { "id": "object_05", "target": "basket_green" },
+    { "id": "object_06", "target": "basket_green" },
+    { "id": "object_07", "target": "basket_yellow" },
+    { "id": "object_08", "target": "basket_yellow" },
+    { "id": "object_09", "target": "basket_orange" },
+    { "id": "object_10", "target": "basket_orange" },
+    { "id": "object_11", "target": "basket_purple" },
+    { "id": "object_12", "target": "basket_purple" }
+  ],
+  "targets": [
+    "basket_red",
+    "basket_blue",
+    "basket_green",
+    "basket_yellow",
+    "basket_orange",
+    "basket_purple"
+  ]
+}
