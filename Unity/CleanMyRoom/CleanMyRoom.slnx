@@ -1,8 +1,14 @@
 ﻿<Solution>
-  <Project Path="CleanMyRoom.Player.csproj" />
+  <Project Path="CleanMyRoom.UI.csproj" />
   <Project Path="CleanMyRoom.Gameplay.csproj" />
+  <Project Path="CleanMyRoom.Core.csproj" />
   <Project Path="CleanMyRoom.Net.csproj" />
+  <Project Path="CleanMyRoom.Player.csproj" />
   <Project Path="CleanMyRoom.Tests.Editor.csproj" />
+  <Project Path="CleanMyRoom.Tests.PlayMode.csproj" />
+  <Project Path="CleanMyRoom.Tests.BedroomEnvironment.csproj" />
+  <Project Path="CleanMyRoom.Tests.SceneArchitecture.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="CleanMyRoom.Tests.BedroomEnvironment.PlayMode.csproj" />
 </Solution>

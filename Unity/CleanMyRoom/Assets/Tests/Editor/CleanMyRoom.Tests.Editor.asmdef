@@ -2,13 +2,16 @@
     "name": "CleanMyRoom.Tests.Editor",
     "rootNamespace": "CleanMyRoom.Tests",
     "references": [
+        "CleanMyRoom.Core",
         "CleanMyRoom.Net",
         "CleanMyRoom.Player",
         "CleanMyRoom.Gameplay",
+        "CleanMyRoom.UI",
         "Unity.InputSystem",
         "Unity.InputSystem.TestFramework",
         "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEditor.TestRunner",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [
         "Editor"

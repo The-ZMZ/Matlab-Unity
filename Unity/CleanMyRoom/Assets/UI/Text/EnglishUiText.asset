@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3e0e05f77ae3047bcd4407d37fa74f, type: 3}
+  m_Name: EnglishUiText
+  m_EditorClassIdentifier: CleanMyRoom.UI::CleanMyRoom.UI.UiTextCatalog
+  entries:
+  - key: main.title
+    text: Clean My Room!
+  - key: main.start
+    text: Start Game
+  - key: main.quit
+    text: Quit
+  - key: pause.title
+    text: Paused
+  - key: pause.resume
+    text: Resume
+  - key: pause.mainMenu
+    text: Main Menu
+  - key: instructions.title
+    text: How to Play
+  - key: instructions.color
+    text: Sort the objects by colour. Drag each object onto the matching basket.
+  - key: instructions.taste
+    text: Classify each food by taste. Drag it onto Sweet, Sour, Bitter or Salty.
+  - key: instructions.math
+    text: Match each number to the group with the same number of dots.
+  - key: instructions.close
+    text: Got it!
+  - key: feedback.success
+    text: Well done!
+  - key: feedback.error
+    text: Oops! Something went wrong. Please try again.
+  - key: feedback.close
+    text: OK

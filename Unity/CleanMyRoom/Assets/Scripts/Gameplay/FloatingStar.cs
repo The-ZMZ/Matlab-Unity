@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace CleanMyRoom.Gameplay
@@ -10,6 +11,12 @@ namespace CleanMyRoom.Gameplay
     [DisallowMultipleComponent]
     public sealed class FloatingStar : MonoBehaviour
     {
+        /// <summary>
+        /// Raised only when a live MATLAB-driven completion collects this star.
+        /// Audio listens to this event; star behaviour itself is unchanged.
+        /// </summary>
+        public static event Action<string> StarCollected;
+
         [SerializeField] private string activityId = ActivityIds.Color;
         [SerializeField] private Transform visual;
         [SerializeField] private Light glowLight;
@@ -118,6 +125,14 @@ namespace CleanMyRoom.Gameplay
 
             if (string.Equals(changedActivityId, activityId, System.StringComparison.Ordinal))
             {
+                if (completed && !IsCompleted)
+                {
+                    Action<string> handler = StarCollected;
+                    if (handler != null)
+                    {
+                        handler(activityId);
+                    }
+                }
                 SetCompleted(completed);
             }
         }

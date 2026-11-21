@@ -1,0 +1,20 @@
+{
+    "name": "CleanMyRoom.UI",
+    "rootNamespace": "CleanMyRoom.UI",
+    "references": [
+        "CleanMyRoom.Core",
+        "CleanMyRoom.Gameplay",
+        "CleanMyRoom.Net",
+        "Unity.InputSystem",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
