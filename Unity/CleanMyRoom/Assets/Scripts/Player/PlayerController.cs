@@ -1,5 +1,5 @@
+using CleanMyRoom.Player.Input;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace CleanMyRoom.Player
 {
@@ -95,33 +95,7 @@ namespace CleanMyRoom.Player
         /// </summary>
         public static Vector2 ReadKeyboardMovement()
         {
-            Keyboard keyboard = Keyboard.current;
-            if (keyboard == null)
-            {
-                return Vector2.zero;
-            }
-
-            float x = 0f;
-            float y = 0f;
-
-            if (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed)
-            {
-                x -= 1f;
-            }
-            if (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed)
-            {
-                x += 1f;
-            }
-            if (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed)
-            {
-                y -= 1f;
-            }
-            if (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed)
-            {
-                y += 1f;
-            }
-
-            return NormalizeForDiagonalMovement(new Vector2(x, y));
+            return KeyboardInput.ReadMovement();
         }
 
         /// <summary>
@@ -130,7 +104,7 @@ namespace CleanMyRoom.Player
         /// </summary>
         public static Vector2 NormalizeForDiagonalMovement(Vector2 input)
         {
-            return input.sqrMagnitude > 1f ? input.normalized : input;
+            return KeyboardInput.NormalizeMovement(input);
         }
 
         /// <summary>

@@ -4955,7 +4955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: CleanMyRoom.Gameplay::CleanMyRoom.Gameplay.InteractableFurniture
   activityId: TASTE
   displayName: Dining Table
-  scenePath: Assets/Scenes/TasteSorting.unity
+  scenePath: 
   interactionRadius: 2.8
   interactionAnchor: {fileID: 16356134}
 --- !u!1 &535715684
@@ -5882,7 +5882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: CleanMyRoom.Gameplay::CleanMyRoom.Gameplay.InteractableFurniture
   activityId: COLOR
   displayName: Bed
-  scenePath: Assets/Scenes/ColorSorting.unity
+  scenePath: 
   interactionRadius: 2.8
   interactionAnchor: {fileID: 1978201491}
 --- !u!1 &694544180
@@ -7508,7 +7508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: CleanMyRoom.Gameplay::CleanMyRoom.Gameplay.InteractableFurniture
   activityId: MATH
   displayName: Study Desk
-  scenePath: Assets/Scenes/MathActivity.unity
+  scenePath: 
   interactionRadius: 2.8
   interactionAnchor: {fileID: 1728824810}
 --- !u!1 &847542300

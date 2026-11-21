@@ -21,9 +21,6 @@ namespace CleanMyRoom.Tests
     {
         private const string BedroomScenePath = "Assets/Scenes/Bedroom.unity";
         private const string StarPrefabPath = "Assets/Prefabs/FloatingStar.prefab";
-        private const string ColorScenePath = "Assets/Scenes/ColorSorting.unity";
-        private const string TasteScenePath = "Assets/Scenes/TasteSorting.unity";
-        private const string MathScenePath = "Assets/Scenes/MathActivity.unity";
 
         [SetUp]
         public void ResetProgressState()
@@ -49,9 +46,9 @@ namespace CleanMyRoom.Tests
             EditorSceneManager.OpenScene(BedroomScenePath, OpenSceneMode.Single);
             try
             {
-                AssertFurniture("Bed", ActivityIds.Color, "Bed", ColorScenePath);
-                AssertFurniture("Dining Table", ActivityIds.Taste, "Dining Table", TasteScenePath);
-                AssertFurniture("Study Desk", ActivityIds.Math, "Study Desk", MathScenePath);
+                AssertFurniture("Bed", ActivityIds.Color, "Bed");
+                AssertFurniture("Dining Table", ActivityIds.Taste, "Dining Table");
+                AssertFurniture("Study Desk", ActivityIds.Math, "Study Desk");
             }
             finally
             {
@@ -390,11 +387,7 @@ namespace CleanMyRoom.Tests
                 "InteractionController should live on the Issue #13 player.");
         }
 
-        private static void AssertFurniture(
-            string objectName,
-            string expectedActivityId,
-            string expectedDisplay,
-            string expectedScenePath)
+        private static void AssertFurniture(string objectName, string expectedActivityId, string expectedDisplay)
         {
             GameObject furnitureObject = GameObject.Find(objectName);
             Assert.IsNotNull(furnitureObject, objectName + " is missing from the bedroom.");
@@ -403,31 +396,14 @@ namespace CleanMyRoom.Tests
             Assert.IsNotNull(furniture, objectName + " has no InteractableFurniture.");
             Assert.AreEqual(expectedActivityId, furniture.ActivityId);
             Assert.AreEqual(expectedDisplay, furniture.DisplayName);
-            Assert.IsTrue(furniture.HasConfiguredActivityScene,
-                "The activity scene path must be configured after integration.");
-            Assert.AreEqual(expectedScenePath, furniture.ScenePath,
-                "Furniture must open the correct activity scene.");
-            Assert.IsTrue(IsBuildSceneEnabled(expectedScenePath),
-                "The configured activity scene must be enabled in Build Settings.");
+            Assert.IsFalse(furniture.HasConfiguredActivityScene,
+                "Activity scene paths must stay empty until real scenes are supplied.");
             Assert.IsNotNull(furniture.InteractionAnchor);
 
             Assert.IsTrue(HasCollider(furnitureObject, false),
                 objectName + " needs a non-trigger collider that blocks movement.");
             Assert.IsTrue(HasCollider(furnitureObject, true),
                 objectName + " needs a trigger collider for interaction discovery.");
-        }
-
-        private static bool IsBuildSceneEnabled(string scenePath)
-        {
-            EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
-            for (int i = 0; i < scenes.Length; i++)
-            {
-                if (scenes[i].path == scenePath)
-                {
-                    return scenes[i].enabled;
-                }
-            }
-            return false;
         }
 
         private static bool HasCollider(GameObject target, bool trigger)

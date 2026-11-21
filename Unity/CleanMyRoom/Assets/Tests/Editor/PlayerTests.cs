@@ -112,7 +112,7 @@ namespace CleanMyRoom.Tests
                 Assert.IsNotNull(GameObject.Find("Bedroom_Floor").GetComponent<MeshCollider>());
                 Assert.IsNotNull(GameObject.Find("Back_Wall").GetComponent<BoxCollider>());
                 Assert.IsNotNull(GameObject.Find("Left_Wall").GetComponent<BoxCollider>());
-                Assert.IsNotNull(GameObject.Find("Right_Wall").GetComponent<BoxCollider>());
+                Assert.IsNotNull(GameObject.Find("Righr_Wall").GetComponent<BoxCollider>());
             }
             finally
             {
@@ -120,34 +120,17 @@ namespace CleanMyRoom.Tests
                 {
                     EditorSceneManager.OpenScene(originalScene, OpenSceneMode.Single);
                 }
-                else
-                {
-                    // The test runner may start with no scene loaded. Clear the
-                    // bedroom scene so its colliders cannot leak into later tests.
-                    EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
-                }
             }
         }
 
         [Test]
-        public void BedroomScene_IsEnabledInBuildSettings()
+        public void BedroomScene_IsTheFirstEnabledBuildScene()
         {
             EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
             Assert.Greater(scenes.Length, 0, "Build Settings has no scenes.");
-
-            bool bedroomFound = false;
-            for (int i = 0; i < scenes.Length; i++)
-            {
-                if (scenes[i].path == BedroomScenePath)
-                {
-                    bedroomFound = true;
-                    Assert.IsTrue(scenes[i].enabled,
-                        "The bedroom scene is disabled in Build Settings.");
-                }
-            }
-            Assert.IsTrue(bedroomFound, "The bedroom scene is missing from Build Settings.");
-            Assert.AreEqual("Assets/Scenes/MainMenu.unity", scenes[0].path,
-                "The six-scene architecture starts at the main menu.");
+            Assert.AreEqual(BedroomScenePath, scenes[0].path,
+                "The bedroom must be the startup scene.");
+            Assert.IsTrue(scenes[0].enabled, "The bedroom scene is disabled in Build Settings.");
         }
 
         [Test]

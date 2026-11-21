@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using CleanMyRoom.Player;
+using CleanMyRoom.Player.Input;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace CleanMyRoom.Gameplay
 {
@@ -21,6 +21,7 @@ namespace CleanMyRoom.Gameplay
         [SerializeField, Min(1f)] private float searchRadius = 8f;
 
         private readonly List<InteractableFurniture> candidates = new List<InteractableFurniture>();
+        private readonly InteractionInputTracker interactionInput = new InteractionInputTracker();
 
         public InteractableFurniture CurrentTarget { get; private set; }
 
@@ -43,8 +44,10 @@ namespace CleanMyRoom.Gameplay
         private void OnDisable()
         {
             // The player is destroyed when an activity scene loads. Clearing here
-            // guarantees the prompt cannot survive the transition.
+            // guarantees the prompt and interaction latch cannot survive the
+            // transition.
             CurrentTarget = null;
+            interactionInput.Reset();
         }
 
         /// <summary>Recompute the current target from nearby trigger colliders.</summary>
@@ -55,12 +58,13 @@ namespace CleanMyRoom.Gameplay
         }
 
         /// <summary>
-        /// Handle one E-key press. Public so EditMode tests can drive exactly the
-        /// same path that Update() uses.
+        /// Handle one E-key press. The tracker allows a single action per press,
+        /// so repeated polls in the same frame or a held key cannot re-open an
+        /// activity. Public so EditMode tests drive exactly the same path as Update().
         /// </summary>
         public bool HandleInteractionInput()
         {
-            if (!ReadInteractPressed())
+            if (!interactionInput.ConsumePress())
             {
                 return false;
             }
@@ -87,10 +91,10 @@ namespace CleanMyRoom.Gameplay
                 CurrentTarget.ActivityId, CurrentTarget.ScenePath);
         }
 
+        /// <summary>Raw E-key down state, kept for simple tooling and tests.</summary>
         public static bool ReadInteractPressed()
         {
-            Keyboard keyboard = Keyboard.current;
-            return keyboard != null && keyboard.eKey.wasPressedThisFrame;
+            return KeyboardInput.ReadInteractPressed();
         }
 
         /// <summary>
