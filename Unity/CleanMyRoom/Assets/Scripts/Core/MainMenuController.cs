@@ -15,5 +15,15 @@ namespace CleanMyRoom.Core
         {
             SceneLoader.LoadBedroom();
         }
+
+        /// <summary>UI callback for the Quit button.</summary>
+        public void QuitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
     }
 }
