@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="tTasteSorting" skipped="0" tests="26" time="10.5115">
+    <testcase classname="tTasteSorting" name="datasetContainsExactlyEightValidFoods" time="1.1428"/>
+    <testcase classname="tTasteSorting" name="allFoodIdsAreUniqueAndStable" time="0.14481"/>
+    <testcase classname="tTasteSorting" name="allFoodCategoryMappingsAreCorrect" time="0.17761"/>
+    <testcase classname="tTasteSorting" name="datasetValidatorRejectsInvalidEntries" time="0.37503"/>
+    <testcase classname="tTasteSorting" name="correctAnswersAreAcceptedForEveryFood" time="0.1461"/>
+    <testcase classname="tTasteSorting" name="directTasteComparisonIsSupported" time="0.017032"/>
+    <testcase classname="tTasteSorting" name="incorrectAnswersAreRejectedForEveryFood" time="0.092447"/>
+    <testcase classname="tTasteSorting" name="categoryMatchingIsCaseInsensitive" time="0.019241"/>
+    <testcase classname="tTasteSorting" name="emptyInputIsHandledWithoutThrowing" time="0.026437"/>
+    <testcase classname="tTasteSorting" name="invalidCategoriesAreRejected" time="0.015784"/>
+    <testcase classname="tTasteSorting" name="unknownFoodIdentifiersAreRejected" time="0.029544"/>
+    <testcase classname="tTasteSorting" name="malformedFoodInputIsRejectedWithoutArrayResults" time="0.019458"/>
+    <testcase classname="tTasteSorting" name="placementResponseUsesExistingProtocolErrorCodes" time="0.02591"/>
+    <testcase classname="tTasteSorting" name="completionRequiresAllEightUniqueFoods" time="0.090839"/>
+    <testcase classname="tTasteSorting" name="completionIgnoresDuplicatesAndUnknownFoods" time="0.036262"/>
+    <testcase classname="tTasteSorting" name="completionPercentageIsCalculatedCorrectly" time="0.036002"/>
+    <testcase classname="tTasteSorting" name="progressTracksAnsweredCorrectIncorrectAndRemaining" time="0.12211"/>
+    <testcase classname="tTasteSorting" name="invalidAnswersDoNotChangeProgress" time="0.025438"/>
+    <testcase classname="tTasteSorting" name="duplicateSubmissionsDoNotIncreaseProgress" time="0.03643"/>
+    <testcase classname="tTasteSorting" name="correctingWrongAnswerCountsFoodOnce" time="0.042501"/>
+    <testcase classname="tTasteSorting" name="progressValuesStayConsistentAfterMixedAnswers" time="0.42459"/>
+    <testcase classname="tTasteSorting" name="allEightFoodsCanBeProcessedSuccessfully" time="0.34021"/>
+    <testcase classname="tTasteSorting" name="definitionWorksWithGenericValidatorAndSession" time="0.16015"/>
+    <testcase classname="tTasteSorting" name="sharedJsonMatchesMatlabDataset" time="0.70127"/>
+    <testcase classname="tTasteSorting" name="registryLoadsTasteFromDefaultDataDirectory" time="0.061968"/>
+    <testcase classname="tTasteSorting" name="serverHandlesTastePlacementsOverTcp" time="6.2015"/>
+  </testsuite>
+</testsuites>
