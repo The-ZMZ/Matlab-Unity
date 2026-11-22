@@ -17,6 +17,11 @@ namespace CleanMyRoom.UI
         public const string InstructionsMath = "instructions.math";
         public const string InstructionsClose = "instructions.close";
 
+        public const string TasteSweet = "taste.sweet";
+        public const string TasteSour = "taste.sour";
+        public const string TasteBitter = "taste.bitter";
+        public const string TasteSalty = "taste.salty";
+
         public const string FeedbackSuccess = "feedback.success";
         public const string FeedbackError = "feedback.error";
         public const string FeedbackClose = "feedback.close";

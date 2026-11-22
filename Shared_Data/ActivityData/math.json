@@ -1,0 +1,20 @@
+{
+  "id": "MATH",
+  "title": "Number and Dot Matching",
+  "objects": [
+    { "id": "number_1", "target": "dots_1" },
+    { "id": "number_2", "target": "dots_2" },
+    { "id": "number_3", "target": "dots_3" },
+    { "id": "number_4", "target": "dots_4" },
+    { "id": "number_5", "target": "dots_5" },
+    { "id": "number_6", "target": "dots_6" },
+    { "id": "number_7", "target": "dots_7" },
+    { "id": "number_8", "target": "dots_8" },
+    { "id": "number_9", "target": "dots_9" },
+    { "id": "number_10", "target": "dots_10" }
+  ],
+  "targets": [
+    "dots_1", "dots_2", "dots_3", "dots_4", "dots_5",
+    "dots_6", "dots_7", "dots_8", "dots_9", "dots_10"
+  ]
+}

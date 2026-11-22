@@ -1,0 +1,15 @@
+{
+  "id": "TASTE",
+  "title": "Taste Sorting",
+  "objects": [
+    { "id": "food_honey", "target": "sweet" },
+    { "id": "food_banana", "target": "sweet" },
+    { "id": "food_lemon", "target": "sour" },
+    { "id": "food_green_apple", "target": "sour" },
+    { "id": "food_coffee", "target": "bitter" },
+    { "id": "food_cocoa", "target": "bitter" },
+    { "id": "food_olives", "target": "salty" },
+    { "id": "food_salt", "target": "salty" }
+  ],
+  "targets": ["sweet", "sour", "bitter", "salty"]
+}

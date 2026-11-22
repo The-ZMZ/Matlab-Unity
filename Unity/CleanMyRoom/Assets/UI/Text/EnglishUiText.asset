@@ -35,6 +35,14 @@ MonoBehaviour:
     text: Match each number to the group with the same number of dots.
   - key: instructions.close
     text: Got it!
+  - key: taste.sweet
+    text: Sweet
+  - key: taste.sour
+    text: Sour
+  - key: taste.bitter
+    text: Bitter
+  - key: taste.salty
+    text: Salty
   - key: feedback.success
     text: Well done!
   - key: feedback.error
