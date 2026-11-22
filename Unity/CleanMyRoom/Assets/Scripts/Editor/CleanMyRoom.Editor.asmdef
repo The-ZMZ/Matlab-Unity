@@ -1,0 +1,20 @@
+{
+    "name": "CleanMyRoom.Editor",
+    "rootNamespace": "CleanMyRoom.Editor",
+    "references": [
+        "CleanMyRoom.Core",
+        "CleanMyRoom.Net",
+        "CleanMyRoom.ColorSorting"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

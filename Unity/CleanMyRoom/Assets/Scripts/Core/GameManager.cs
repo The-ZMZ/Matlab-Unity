@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,9 +13,10 @@ namespace CleanMyRoom.Core
     /// DontDestroyOnLoad so it survives every scene transition. A second
     /// instance (for example one placed in a scene by mistake) is removed.
     ///
-    /// This manager deliberately holds no answers, scores or star counts:
-    /// MATLAB owns progress and validation. Here it only tracks which scene
-    /// is active so presentation code has one place to listen for changes.
+    /// This manager holds no answers and makes no correctness decisions:
+    /// MATLAB owns validation and progress. It records the scene and mirrors
+    /// the star/completion values that MATLAB sends, so every activity has one
+    /// shared place to display progress and one completion event to observe.
     /// </summary>
     [DisallowMultipleComponent]
     [DefaultExecutionOrder(-200)]
@@ -27,6 +29,95 @@ namespace CleanMyRoom.Core
 
         /// <summary>Name of the most recently loaded scene.</summary>
         public string CurrentSceneName { get; private set; } = string.Empty;
+
+        private readonly HashSet<string> completedActivities =
+            new HashSet<string>(StringComparer.Ordinal);
+
+        /// <summary>
+        /// Raised when MATLAB reports that an activity has been completed.
+        /// The argument is the MATLAB activity id (for example "COLOR").
+        /// </summary>
+        public event Action<string, int> ActivityCompletedFromMatlab;
+
+        /// <summary>Total stars reported by MATLAB for the current session.</summary>
+        public int TotalStars { get; private set; }
+
+        /// <summary>True when MATLAB reports the whole game as completed.</summary>
+        public bool GameCompleted { get; private set; }
+
+        /// <summary>True when MATLAB has reported this activity as completed.</summary>
+        public bool IsActivityComplete(string activityId)
+        {
+            return !string.IsNullOrEmpty(activityId) && completedActivities.Contains(activityId);
+        }
+
+        /// <summary>
+        /// Mirror one ACTIVITY_RESULT message. Never call this from local answer
+        /// checking: the arguments must come from MATLAB.
+        /// </summary>
+        public void ApplyMatlabActivityResult(string activityId, bool completed, int totalStars)
+        {
+            if (totalStars > TotalStars)
+            {
+                TotalStars = totalStars;
+            }
+            if (!completed || string.IsNullOrEmpty(activityId))
+            {
+                return;
+            }
+            if (!completedActivities.Add(activityId))
+            {
+                return;
+            }
+
+            Action<string, int> handler = ActivityCompletedFromMatlab;
+            if (handler != null)
+            {
+                handler(activityId, TotalStars);
+            }
+        }
+
+        /// <summary>
+        /// Mirror one GAME_PROGRESS message. Values are MATLAB's, not Unity's.
+        /// </summary>
+        public void ApplyMatlabGameProgress(
+            int totalStars, string[] finishedActivities, bool gameCompleted)
+        {
+            if (totalStars > TotalStars)
+            {
+                TotalStars = totalStars;
+            }
+            GameCompleted = gameCompleted;
+
+            if (finishedActivities == null)
+            {
+                return;
+            }
+            for (int i = 0; i < finishedActivities.Length; i++)
+            {
+                string activityId = finishedActivities[i];
+                if (string.IsNullOrEmpty(activityId) || !completedActivities.Add(activityId))
+                {
+                    continue;
+                }
+                Action<string, int> handler = ActivityCompletedFromMatlab;
+                if (handler != null)
+                {
+                    handler(activityId, TotalStars);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Clear mirrored progress to give automated tests a clean baseline (and
+        /// for a future new-game flow). It never validates answers.
+        /// </summary>
+        public void ResetProgress()
+        {
+            TotalStars = 0;
+            GameCompleted = false;
+            completedActivities.Clear();
+        }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void EnsureInstance()

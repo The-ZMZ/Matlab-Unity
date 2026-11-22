@@ -1,0 +1,531 @@
+
+	Trial License -- for use to evaluate programs for possible purchase as an end-user only.
+
+ Running t3DObjects
+  Setting up t3DObjects
+  Done setting up t3DObjects in 0.36602 seconds
+   Running t3DObjects/cubeHasEightVerticesAndSixFaces
+   Done t3DObjects/cubeHasEightVerticesAndSixFaces in 0.59641 seconds
+   Running t3DObjects/cubeVerticesAreExpectedCorners
+   Done t3DObjects/cubeVerticesAreExpectedCorners in 0.14994 seconds
+   Running t3DObjects/cubeFacesAreQuadsWithOutwardNormals
+   Done t3DObjects/cubeFacesAreQuadsWithOutwardNormals in 0.24302 seconds
+   Running t3DObjects/cubeEdgesHaveSideLength
+   Done t3DObjects/cubeEdgesHaveSideLength in 0.078224 seconds
+   Running t3DObjects/cubeMetadataMatchesGeometry
+   Done t3DObjects/cubeMetadataMatchesGeometry in 0.07112 seconds
+   Running t3DObjects/cubeRejectsInvalidInputs
+   Done t3DObjects/cubeRejectsInvalidInputs in 0.37932 seconds
+   Running t3DObjects/sphereParameterRange
+   Done t3DObjects/sphereParameterRange in 0.076561 seconds
+   Running t3DObjects/sphereGridSizeAndSeam
+   Done t3DObjects/sphereGridSizeAndSeam in 0.1036 seconds
+   Running t3DObjects/sphereCoordinatesSatisfyEquation
+   Done t3DObjects/sphereCoordinatesSatisfyEquation in 0.053325 seconds
+   Running t3DObjects/sphereMeshCounts
+   Done t3DObjects/sphereMeshCounts in 0.028222 seconds
+   Running t3DObjects/sphereVerticesLieOnRadius
+   Done t3DObjects/sphereVerticesLieOnRadius in 0.029759 seconds
+   Running t3DObjects/sphereFacesPointOutward
+   Done t3DObjects/sphereFacesPointOutward in 0.063391 seconds
+   Running t3DObjects/sphereMetadataMatchesAnalyticalValues
+   Done t3DObjects/sphereMetadataMatchesAnalyticalValues in 0.013782 seconds
+   Running t3DObjects/sphereRejectsInvalidInputs
+   Done t3DObjects/sphereRejectsInvalidInputs in 0.057717 seconds
+   Running t3DObjects/cylinderParameterValues
+   Done t3DObjects/cylinderParameterValues in 0.031717 seconds
+   Running t3DObjects/cylinderVertexAndFaceCounts
+   Done t3DObjects/cylinderVertexAndFaceCounts in 0.025422 seconds
+   Running t3DObjects/cylinderRadiusHeightAndCentre
+   Done t3DObjects/cylinderRadiusHeightAndCentre in 0.024152 seconds
+   Running t3DObjects/cylinderCapsUseEveryRingVertex
+   Done t3DObjects/cylinderCapsUseEveryRingVertex in 0.015919 seconds
+   Running t3DObjects/cylinderFacesPointOutward
+   Done t3DObjects/cylinderFacesPointOutward in 0.023307 seconds
+   Running t3DObjects/cylinderSideGridMatchesMesh
+   Done t3DObjects/cylinderSideGridMatchesMesh in 0.039066 seconds
+   Running t3DObjects/cylinderCapCoordinatesAreClosedCircles
+   Done t3DObjects/cylinderCapCoordinatesAreClosedCircles in 0.048892 seconds
+   Running t3DObjects/cylinderMetadataApproachesCircle
+   Done t3DObjects/cylinderMetadataApproachesCircle in 0.024679 seconds
+   Running t3DObjects/cylinderMetadataIsExactForSquarePrism
+   Done t3DObjects/cylinderMetadataIsExactForSquarePrism in 0.010861 seconds
+   Running t3DObjects/cylinderRejectsInvalidInputs
+   Done t3DObjects/cylinderRejectsInvalidInputs in 0.050216 seconds
+   Running t3DObjects/allPrimitiveMeshesTriangulateWithoutDegenerateFaces
+   Done t3DObjects/allPrimitiveMeshesTriangulateWithoutDegenerateFaces in 0.049444 seconds
+  Tearing down t3DObjects
+  Done tearing down t3DObjects in 0.16155 seconds
+ Done t3DObjects in 2.8156 seconds
+__________
+
+ Running tCodec
+  Setting up tCodec
+  Done setting up tCodec in 0.26829 seconds
+   Running tCodec/encodesCompactJson
+   Done tCodec/encodesCompactJson in 0.11433 seconds
+   Running tCodec/encodeLineEndsWithNewline
+   Done tCodec/encodeLineEndsWithNewline in 0.01877 seconds
+   Running tCodec/encodesNestedStruct
+   Done tCodec/encodesNestedStruct in 0.011037 seconds
+   Running tCodec/decodesValidMessage
+   Done tCodec/decodesValidMessage in 0.053388 seconds
+   Running tCodec/rejectsMalformedJson
+   Done tCodec/rejectsMalformedJson in 0.026039 seconds
+   Running tCodec/rejectsEmptyMessage
+   Done tCodec/rejectsEmptyMessage in 0.014596 seconds
+   Running tCodec/rejectsNonObjectJson
+   Done tCodec/rejectsNonObjectJson in 0.004906 seconds
+   Running tCodec/rejectsMissingType
+   Done tCodec/rejectsMissingType in 0.0060298 seconds
+   Running tCodec/rejectsNonTextType
+   Done tCodec/rejectsNonTextType in 0.003497 seconds
+   Running tCodec/requireTextRejectsMissingField
+   Done tCodec/requireTextRejectsMissingField in 0.034942 seconds
+   Running tCodec/requireTextAcceptsValue
+   Done tCodec/requireTextAcceptsValue in 0.0048462 seconds
+   Running tCodec/readsValidPosition
+   Done tCodec/readsValidPosition in 0.013887 seconds
+   Running tCodec/rejectsMissingPosition
+   Done tCodec/rejectsMissingPosition in 0.016989 seconds
+   Running tCodec/rejectsNonFinitePosition
+   Done tCodec/rejectsNonFinitePosition in 0.0043082 seconds
+   Running tCodec/toleratesUnknownFields
+   Done tCodec/toleratesUnknownFields in 0.0055205 seconds
+   Running tCodec/encodesSingleElementStringArrayAsJsonArray
+   Done tCodec/encodesSingleElementStringArrayAsJsonArray in 0.014691 seconds
+   Running tCodec/encodesEmptyStringArrayAsJsonArray
+   Done tCodec/encodesEmptyStringArrayAsJsonArray in 0.003084 seconds
+   Running tCodec/encodesMultipleStringArrayAsJsonArray
+   Done tCodec/encodesMultipleStringArrayAsJsonArray in 0.0020945 seconds
+  Tearing down tCodec
+  Done tearing down tCodec in 0.15949 seconds
+ Done tCodec in 0.78073 seconds
+__________
+
+ Running tColorSortingActivity
+  Setting up tColorSortingActivity
+  Done setting up tColorSortingActivity in 0.2687 seconds
+   Running tColorSortingActivity/definitionHasSixTargetsAndTwelveObjects
+   Done tColorSortingActivity/definitionHasSixTargetsAndTwelveObjects in 0.21703 seconds
+   Running tColorSortingActivity/validatorAcceptsOnlyMatchingBaskets
+   Done tColorSortingActivity/validatorAcceptsOnlyMatchingBaskets in 0.10974 seconds
+   Running tColorSortingActivity/twelveCorrectPlacementsAwardExactlyOneStar
+   Done tColorSortingActivity/twelveCorrectPlacementsAwardExactlyOneStar in 0.15416 seconds
+   Running tColorSortingActivity/wrongPlacementDoesNotChangeProgress
+   Done tColorSortingActivity/wrongPlacementDoesNotChangeProgress in 0.05306 seconds
+  Tearing down tColorSortingActivity
+  Done tearing down tColorSortingActivity in 0.17639 seconds
+ Done tColorSortingActivity in 0.97907 seconds
+__________
+
+ Running tColorSortingProtocol
+  Setting up tColorSortingProtocol
+  Done setting up tColorSortingProtocol in 0.29672 seconds
+   Running tColorSortingProtocol/wrongBasketIsRejectedWithoutScore
+   Done tColorSortingProtocol/wrongBasketIsRejectedWithoutScore in 3.4247 seconds
+   Running tColorSortingProtocol/twelveValidatedPlacementsCompleteAndAwardFirstStar
+   Done tColorSortingProtocol/twelveValidatedPlacementsCompleteAndAwardFirstStar in 2.7468 seconds
+  Tearing down tColorSortingProtocol
+  Done tearing down tColorSortingProtocol in 0.15943 seconds
+ Done tColorSortingProtocol in 6.6277 seconds
+__________
+
+ Running tGeometryExporter
+  Setting up tGeometryExporter
+  Done setting up tGeometryExporter in 0.29656 seconds
+   Running tGeometryExporter/exportWritesVerticesFacesAndMaterialReferences
+   Done tGeometryExporter/exportWritesVerticesFacesAndMaterialReferences in 0.50846 seconds
+   Running tGeometryExporter/exportWritesMaterialFileWithPhongProperties
+   Done tGeometryExporter/exportWritesMaterialFileWithPhongProperties in 0.15433 seconds
+   Running tGeometryExporter/exportWritesVertexColorsWhenRequested
+   Done tGeometryExporter/exportWritesVertexColorsWhenRequested in 0.23801 seconds
+   Running tGeometryExporter/exportOmitsOptionalDataWhenDisabled
+   Done tGeometryExporter/exportOmitsOptionalDataWhenDisabled in 0.19956 seconds
+   Running tGeometryExporter/readOBJRecoversExportedGeometry
+   Done tGeometryExporter/readOBJRecoversExportedGeometry in 0.41465 seconds
+   Running tGeometryExporter/readOBJHandlesPlainFacesFromIssue007
+   Done tGeometryExporter/readOBJHandlesPlainFacesFromIssue007 in 0.052607 seconds
+   Running tGeometryExporter/unityConversionRemapsAxesAndDimensions
+   Done tGeometryExporter/unityConversionRemapsAxesAndDimensions in 0.069717 seconds
+   Running tGeometryExporter/unityConversionReversesFaceWinding
+   Done tGeometryExporter/unityConversionReversesFaceWinding in 0.035565 seconds
+   Running tGeometryExporter/matlabConversionLeavesMeshUnchanged
+   Done tGeometryExporter/matlabConversionLeavesMeshUnchanged in 0.064171 seconds
+   Running tGeometryExporter/exportedUnityFileUsesRemappedCoordinates
+   Done tGeometryExporter/exportedUnityFileUsesRemappedCoordinates in 0.14223 seconds
+   Running tGeometryExporter/convertMeshRejectsUnknownSystem
+   Done tGeometryExporter/convertMeshRejectsUnknownSystem in 0.057055 seconds
+   Running tGeometryExporter/exportAddsMissingExtensionAndCreatesFolders
+   Done tGeometryExporter/exportAddsMissingExtensionAndCreatesFolders in 0.062688 seconds
+   Running tGeometryExporter/exportUsesDerivedMaterialWhenNoneProvided
+   Done tGeometryExporter/exportUsesDerivedMaterialWhenNoneProvided in 0.055356 seconds
+   Running tGeometryExporter/exportFromTransformedMeshPreservesDimensions
+   Done tGeometryExporter/exportFromTransformedMeshPreservesDimensions in 0.08587 seconds
+   Running tGeometryExporter/exportIsDeterministic
+   Done tGeometryExporter/exportIsDeterministic in 0.086101 seconds
+   Running tGeometryExporter/exportRejectsInvalidInputs
+   Done tGeometryExporter/exportRejectsInvalidInputs in 0.063494 seconds
+  Tearing down tGeometryExporter
+  Done tearing down tGeometryExporter in 0.18842 seconds
+ Done tGeometryExporter in 2.7748 seconds
+__________
+
+ Running tLighting
+  Setting up tLighting
+  Done setting up tLighting in 0.25185 seconds
+   Running tLighting/light3DUsesDocumentedDefaults
+   Done tLighting/light3DUsesDocumentedDefaults in 0.050975 seconds
+   Running tLighting/light3DRejectsInvalidValues
+   Done tLighting/light3DRejectsInvalidValues in 0.074713 seconds
+   Running tLighting/directionToReturnsOutwardUnitVectors
+   Done tLighting/directionToReturnsOutwardUnitVectors in 0.040889 seconds
+   Running tLighting/directionToRejectsBadAndCoincidentPoints
+   Done tLighting/directionToRejectsBadAndCoincidentPoints in 0.03392 seconds
+   Running tLighting/attenuationFollowsDocumentedDistanceFormula
+   Done tLighting/attenuationFollowsDocumentedDistanceFormula in 0.011466 seconds
+   Running tLighting/ambientColorCombinesColorIntensityAndAmbient
+   Done tLighting/ambientColorCombinesColorIntensityAndAmbient in 0.016922 seconds
+   Running tLighting/material3DUsesNeutralDefaults
+   Done tLighting/material3DUsesNeutralDefaults in 0.027763 seconds
+   Running tLighting/fromColorDerivesAllComponents
+   Done tLighting/fromColorDerivesAllComponents in 0.029711 seconds
+   Running tLighting/fromColorHonoursOptionalArguments
+   Done tLighting/fromColorHonoursOptionalArguments in 0.026816 seconds
+   Running tLighting/material3DRejectsInvalidValues
+   Done tLighting/material3DRejectsInvalidValues in 0.053283 seconds
+   Running tLighting/ambientMatchesPublishedEquation
+   Done tLighting/ambientMatchesPublishedEquation in 0.018498 seconds
+   Running tLighting/diffuseIsLambertianAndVanishesOnBackFaces
+   Done tLighting/diffuseIsLambertianAndVanishesOnBackFaces in 0.031718 seconds
+   Running tLighting/specularDependsOnReflectionAndViewer
+   Done tLighting/specularDependsOnReflectionAndViewer in 0.047146 seconds
+   Running tLighting/illuminateReturnsConsistentComponents
+   Done tLighting/illuminateReturnsConsistentComponents in 0.044832 seconds
+   Running tLighting/normalsAreNormalisedBeforeLighting
+   Done tLighting/normalsAreNormalisedBeforeLighting in 0.018212 seconds
+   Running tLighting/lightingModelRejectsInvalidInputs
+   Done tLighting/lightingModelRejectsInvalidInputs in 0.10777 seconds
+   Running tLighting/faceNormalsGatewayMatchesMesh3D
+   Done tLighting/faceNormalsGatewayMatchesMesh3D in 0.0091673 seconds
+   Running tLighting/faceCentersAndAreasOfCubeAreExact
+   Done tLighting/faceCentersAndAreasOfCubeAreExact in 0.016546 seconds
+   Running tLighting/cubeVertexNormalsAreAreaWeightedAndUnitLength
+   Done tLighting/cubeVertexNormalsAreAreaWeightedAndUnitLength in 0.011041 seconds
+   Running tLighting/outwardNormalsPointAwayFromMeshCentre
+   Done tLighting/outwardNormalsPointAwayFromMeshCentre in 0.033056 seconds
+   Running tLighting/orientOutwardsFlipsInwardNormals
+   Done tLighting/orientOutwardsFlipsInwardNormals in 0.01402 seconds
+   Running tLighting/isOutwardDetectsNormalOrientation
+   Done tLighting/isOutwardDetectsNormalOrientation in 0.014054 seconds
+   Running tLighting/visualizeDrawsQuiverOverMesh
+   Done tLighting/visualizeDrawsQuiverOverMesh in 4.7361 seconds
+   Running tLighting/surfaceNormalsRejectInvalidInputs
+   Done tLighting/surfaceNormalsRejectInvalidInputs in 0.38922 seconds
+   Running tLighting/lambertianProducesFlatPerFaceColors
+   Done tLighting/lambertianProducesFlatPerFaceColors in 0.15837 seconds
+   Running tLighting/phongProducesSmoothPerVertexColors
+   Done tLighting/phongProducesSmoothPerVertexColors in 0.051975 seconds
+   Running tLighting/shadeDispatchesByMethodName
+   Done tLighting/shadeDispatchesByMethodName in 0.087299 seconds
+   Running tLighting/renderCreatesPatchWithComputedColors
+   Done tLighting/renderCreatesPatchWithComputedColors in 0.68116 seconds
+   Running tLighting/allPrimitivesShadeWithFiniteColors
+   Done tLighting/allPrimitivesShadeWithFiniteColors in 0.059734 seconds
+  Tearing down tLighting
+  Done tearing down tLighting in 0.15915 seconds
+ Done tLighting in 7.3074 seconds
+__________
+
+ Running tMesh3D
+  Setting up tMesh3D
+  Done setting up tMesh3D in 0.27699 seconds
+   Running tMesh3D/createAcceptsNumericFaceMatrix
+   Done tMesh3D/createAcceptsNumericFaceMatrix in 0.050015 seconds
+   Running tMesh3D/createAcceptsMixedCellFaces
+   Done tMesh3D/createAcceptsMixedCellFaces in 0.010053 seconds
+   Running tMesh3D/createPreservesParameters
+   Done tMesh3D/createPreservesParameters in 0.0075602 seconds
+   Running tMesh3D/createRejectsTooFewVertices
+   Done tMesh3D/createRejectsTooFewVertices in 0.014753 seconds
+   Running tMesh3D/createRejectsNonFiniteVertices
+   Done tMesh3D/createRejectsNonFiniteVertices in 0.008415 seconds
+   Running tMesh3D/createRejectsEmptyName
+   Done tMesh3D/createRejectsEmptyName in 0.0093899 seconds
+   Running tMesh3D/createRejectsInvalidColor
+   Done tMesh3D/createRejectsInvalidColor in 0.15845 seconds
+   Running tMesh3D/createRejectsNonStructParameters
+   Done tMesh3D/createRejectsNonStructParameters in 0.017263 seconds
+   Running tMesh3D/createRejectsOutOfRangeFaceIndex
+   Done tMesh3D/createRejectsOutOfRangeFaceIndex in 0.039321 seconds
+   Running tMesh3D/createRejectsTooShortFace
+   Done tMesh3D/createRejectsTooShortFace in 0.018434 seconds
+   Running tMesh3D/createRejectsRepeatedFaceVertex
+   Done tMesh3D/createRejectsRepeatedFaceVertex in 0.011838 seconds
+   Running tMesh3D/createConvertsRowFaceInput
+   Done tMesh3D/createConvertsRowFaceInput in 0.0087962 seconds
+   Running tMesh3D/triangulateQuadReturnsTwoTriangles
+   Done tMesh3D/triangulateQuadReturnsTwoTriangles in 0.024755 seconds
+   Running tMesh3D/triangulateMixedFacesUsesFanOrder
+   Done tMesh3D/triangulateMixedFacesUsesFanOrder in 0.007499 seconds
+   Running tMesh3D/triangulateRejectsMalformedMesh
+   Done tMesh3D/triangulateRejectsMalformedMesh in 0.015166 seconds
+   Running tMesh3D/boundsReturnsAxisAlignedBox
+   Done tMesh3D/boundsReturnsAxisAlignedBox in 0.0054021 seconds
+   Running tMesh3D/faceNormalsOfSquarePointAlongPositiveZ
+   Done tMesh3D/faceNormalsOfSquarePointAlongPositiveZ in 0.02642 seconds
+   Running tMesh3D/faceNormalsRejectDegenerateFace
+   Done tMesh3D/faceNormalsRejectDegenerateFace in 0.0096243 seconds
+   Running tMesh3D/exportOBJWritesVerticesAndTriangles
+   Done tMesh3D/exportOBJWritesVerticesAndTriangles in 0.074428 seconds
+   Running tMesh3D/exportOBJAddsMissingExtension
+   Done tMesh3D/exportOBJAddsMissingExtension in 0.04426 seconds
+   Running tMesh3D/exportOBJCreatesMissingFolder
+   Done tMesh3D/exportOBJCreatesMissingFolder in 0.038552 seconds
+   Running tMesh3D/exportOBJRejectsInvalidDestination
+   Done tMesh3D/exportOBJRejectsInvalidDestination in 0.022336 seconds
+  Tearing down tMesh3D
+  Done tearing down tMesh3D in 0.15804 seconds
+ Done tMesh3D in 1.0578 seconds
+__________
+
+ Running tProjection
+  Setting up tProjection
+  Done setting up tProjection in 0.27343 seconds
+   Running tProjection/orthographicMatrixMatchesTextbookForm
+   Done tProjection/orthographicMatrixMatchesTextbookForm in 0.052148 seconds
+   Running tProjection/perspectiveMatrixMatchesTextbookForm
+   Done tProjection/perspectiveMatrixMatchesTextbookForm in 0.020523 seconds
+   Running tProjection/perspectiveAcceptsRadianFieldOfView
+   Done tProjection/perspectiveAcceptsRadianFieldOfView in 0.0067754 seconds
+   Running tProjection/viewMatrixPlacesEyeAtOriginAndTargetOnNegativeZ
+   Done tProjection/viewMatrixPlacesEyeAtOriginAndTargetOnNegativeZ in 0.044517 seconds
+   Running tProjection/viewMatrixUsesDocumentedUpDirection
+   Done tProjection/viewMatrixUsesDocumentedUpDirection in 0.023348 seconds
+   Running tProjection/clipCoordinatesComputeHomogeneousValues
+   Done tProjection/clipCoordinatesComputeHomogeneousValues in 0.01456 seconds
+   Running tProjection/projectPointsDividesByW
+   Done tProjection/projectPointsDividesByW in 0.024628 seconds
+   Running tProjection/nearAndFarPlanesMapToMinusOneAndPlusOne
+   Done tProjection/nearAndFarPlanesMapToMinusOneAndPlusOne in 0.011025 seconds
+   Running tProjection/pointBehindCameraIsRejected
+   Done tProjection/pointBehindCameraIsRejected in 0.020853 seconds
+   Running tProjection/projectMeshReturnsTrianglesAndExtent
+   Done tProjection/projectMeshReturnsTrianglesAndExtent in 0.048759 seconds
+   Running tProjection/allPrimitivesProjectToFiniteNdc
+   Done tProjection/allPrimitivesProjectToFiniteNdc in 0.052022 seconds
+   Running tProjection/distanceReturnsEuclideanDistance
+   Done tProjection/distanceReturnsEuclideanDistance in 0.012486 seconds
+   Running tProjection/distanceToMeshUsesBoundingBoxCenter
+   Done tProjection/distanceToMeshUsesBoundingBoxCenter in 0.01256 seconds
+   Running tProjection/orthographicKeepsSizeWhenObjectMovesAway
+   Done tProjection/orthographicKeepsSizeWhenObjectMovesAway in 0.027835 seconds
+   Running tProjection/perspectiveShrinksInverselyWithDistance
+   Done tProjection/perspectiveShrinksInverselyWithDistance in 0.015153 seconds
+   Running tProjection/compareReportsOrthoAndPerspectiveRatio
+   Done tProjection/compareReportsOrthoAndPerspectiveRatio in 0.024698 seconds
+   Running tProjection/compareRejectsDifferentMeshesAndCameras
+   Done tProjection/compareRejectsDifferentMeshesAndCameras in 0.040231 seconds
+   Running tProjection/orthographicRejectsInvalidDimensions
+   Done tProjection/orthographicRejectsInvalidDimensions in 0.033934 seconds
+   Running tProjection/perspectiveRejectsInvalidOptions
+   Done tProjection/perspectiveRejectsInvalidOptions in 0.036029 seconds
+   Running tProjection/viewMatrixRejectsInvalidCameraSetup
+   Done tProjection/viewMatrixRejectsInvalidCameraSetup in 0.044437 seconds
+   Running tProjection/projectionRejectsMalformedInput
+   Done tProjection/projectionRejectsMalformedInput in 0.035939 seconds
+  Tearing down tProjection
+  Done tearing down tProjection in 0.1748 seconds
+ Done tProjection in 1.0507 seconds
+__________
+
+ Running tServerIntegration
+  Setting up tServerIntegration
+  Done setting up tServerIntegration in 0.25332 seconds
+   Running tServerIntegration/serverAcceptsConnection
+   Done tServerIntegration/serverAcceptsConnection in 0.94421 seconds
+   Running tServerIntegration/pingReturnsPong
+   Done tServerIntegration/pingReturnsPong in 1.0246 seconds
+   Running tServerIntegration/correctPlacementReturnsResult
+   Done tServerIntegration/correctPlacementReturnsResult in 1.3557 seconds
+   Running tServerIntegration/secondCorrectPlacementCompletesActivity
+   Done tServerIntegration/secondCorrectPlacementCompletesActivity in 0.99202 seconds
+   Running tServerIntegration/completedActivitiesIsAlwaysJsonArray
+   Done tServerIntegration/completedActivitiesIsAlwaysJsonArray in 0.54488 seconds
+   Running tServerIntegration/incorrectPlacementIsReported
+   Done tServerIntegration/incorrectPlacementIsReported in 0.44654 seconds
+   Running tServerIntegration/unknownActivityReturnsStructuredError
+   Done tServerIntegration/unknownActivityReturnsStructuredError in 0.4404 seconds
+   Running tServerIntegration/unknownObjectReturnsStructuredError
+   Done tServerIntegration/unknownObjectReturnsStructuredError in 0.49632 seconds
+   Running tServerIntegration/unknownTargetReturnsStructuredError
+   Done tServerIntegration/unknownTargetReturnsStructuredError in 0.47276 seconds
+   Running tServerIntegration/missingRequiredFieldReturnsStructuredError
+   Done tServerIntegration/missingRequiredFieldReturnsStructuredError in 0.43837 seconds
+   Running tServerIntegration/invalidJsonReturnsStructuredError
+   Done tServerIntegration/invalidJsonReturnsStructuredError in 0.43437 seconds
+   Running tServerIntegration/unsupportedTypeIsRejected
+   Done tServerIntegration/unsupportedTypeIsRejected in 0.43318 seconds
+   Running tServerIntegration/multipleMessagesInOneWriteAreFramed
+   Done tServerIntegration/multipleMessagesInOneWriteAreFramed in 0.43905 seconds
+   Running tServerIntegration/partialMessageIsReassembled
+   Done tServerIntegration/partialMessageIsReassembled in 0.79096 seconds
+   Running tServerIntegration/duplicateRequestIdIsIgnored
+   Done tServerIntegration/duplicateRequestIdIsIgnored in 1.02 seconds
+   Running tServerIntegration/serverSurvivesDisconnectAndAcceptsReconnect
+   Done tServerIntegration/serverSurvivesDisconnectAndAcceptsReconnect in 0.78001 seconds
+   Running tServerIntegration/stopReleasesConnection
+   Done tServerIntegration/stopReleasesConnection in 0.37999 seconds
+  Tearing down tServerIntegration
+  Done tearing down tServerIntegration in 0.17985 seconds
+ Done tServerIntegration in 11.8666 seconds
+__________
+
+ Running tSession
+  Setting up tSession
+  Done setting up tSession in 0.2763 seconds
+   Running tSession/startsEmpty
+   Done tSession/startsEmpty in 0.032529 seconds
+   Running tSession/correctPlacementScoresWithoutCompleting
+   Done tSession/correctPlacementScoresWithoutCompleting in 0.021694 seconds
+   Running tSession/completingActivityAwardsOneStar
+   Done tSession/completingActivityAwardsOneStar in 0.013609 seconds
+   Running tSession/duplicatePlacementDoesNotIncreaseScore
+   Done tSession/duplicatePlacementDoesNotIncreaseScore in 0.0068898 seconds
+   Running tSession/incorrectPlacementDoesNotScore
+   Done tSession/incorrectPlacementDoesNotScore in 0.0066553 seconds
+   Running tSession/completingActivityTwiceDoesNotAwardExtraStar
+   Done tSession/completingActivityTwiceDoesNotAwardExtraStar in 0.01613 seconds
+   Running tSession/gameCompletesAfterAllActivities
+   Done tSession/gameCompletesAfterAllActivities in 0.02857 seconds
+   Running tSession/resetClearsProgress
+   Done tSession/resetClearsProgress in 0.0089718 seconds
+  Tearing down tSession
+  Done tearing down tSession in 0.15481 seconds
+ Done tSession in 0.56616 seconds
+__________
+
+ Running tTransform3D
+  Setting up tTransform3D
+  Done setting up tTransform3D in 0.24569 seconds
+   Running tTransform3D/identityIsAffineFourByFour
+   Done tTransform3D/identityIsAffineFourByFour in 0.064247 seconds
+   Running tTransform3D/identityLeavesPointsUnchanged
+   Done tTransform3D/identityLeavesPointsUnchanged in 0.016039 seconds
+   Running tTransform3D/translationMatrixUsesLastRowForRowVectors
+   Done tTransform3D/translationMatrixUsesLastRowForRowVectors in 0.0038371 seconds
+   Running tTransform3D/translationAcceptsVectorForm
+   Done tTransform3D/translationAcceptsVectorForm in 0.0067955 seconds
+   Running tTransform3D/translationMovesEveryPointByTheSameOffset
+   Done tTransform3D/translationMovesEveryPointByTheSameOffset in 0.0094019 seconds
+   Running tTransform3D/translationRejectsInvalidInput
+   Done tTransform3D/translationRejectsInvalidInput in 0.053667 seconds
+   Running tTransform3D/rotationXQuarterTurnUsesRightHandRule
+   Done tTransform3D/rotationXQuarterTurnUsesRightHandRule in 0.034311 seconds
+   Running tTransform3D/rotationYQuarterTurnUsesRightHandRule
+   Done tTransform3D/rotationYQuarterTurnUsesRightHandRule in 0.010985 seconds
+   Running tTransform3D/rotationZQuarterTurnUsesRightHandRule
+   Done tTransform3D/rotationZQuarterTurnUsesRightHandRule in 0.011971 seconds
+   Running tTransform3D/rotationsAcceptDegrees
+   Done tTransform3D/rotationsAcceptDegrees in 0.03217 seconds
+   Running tTransform3D/rotationsRejectInvalidAnglesAndUnits
+   Done tTransform3D/rotationsRejectInvalidAnglesAndUnits in 0.045234 seconds
+   Running tTransform3D/rotationLinearPartsAreOrthonormal
+   Done tTransform3D/rotationLinearPartsAreOrthonormal in 0.051461 seconds
+   Running tTransform3D/rotationsPreserveOriginAndDistances
+   Done tTransform3D/rotationsPreserveOriginAndDistances in 0.043543 seconds
+   Running tTransform3D/zeroAndFullTurnsAreIdentity
+   Done tTransform3D/zeroAndFullTurnsAreIdentity in 0.026536 seconds
+   Running tTransform3D/scalingMatrixIsDiagonal
+   Done tTransform3D/scalingMatrixIsDiagonal in 0.0068596 seconds
+   Running tTransform3D/scalingAcceptsUniformScalarAndVectorForms
+   Done tTransform3D/scalingAcceptsUniformScalarAndVectorForms in 0.013577 seconds
+   Running tTransform3D/scalingMultipliesEachCoordinateByItsFactor
+   Done tTransform3D/scalingMultipliesEachCoordinateByItsFactor in 0.0054118 seconds
+   Running tTransform3D/negativeScalingProducesReflection
+   Done tTransform3D/negativeScalingProducesReflection in 0.0093019 seconds
+   Running tTransform3D/scalingRejectsInvalidFactors
+   Done tTransform3D/scalingRejectsInvalidFactors in 0.027661 seconds
+   Running tTransform3D/toHomogeneousAppendsOnes
+   Done tTransform3D/toHomogeneousAppendsOnes in 0.0033374 seconds
+   Running tTransform3D/fromHomogeneousDividesByW
+   Done tTransform3D/fromHomogeneousDividesByW in 0.0044485 seconds
+   Running tTransform3D/fromHomogeneousHandlesNonCanonicalBottomRow
+   Done tTransform3D/fromHomogeneousHandlesNonCanonicalBottomRow in 0.011721 seconds
+   Running tTransform3D/homogeneousHelpersValidateInput
+   Done tTransform3D/homogeneousHelpersValidateInput in 0.029383 seconds
+   Running tTransform3D/transformPointsValidatesArguments
+   Done tTransform3D/transformPointsValidatesArguments in 0.029443 seconds
+   Running tTransform3D/composeMatchesExplicitMatrixProduct
+   Done tTransform3D/composeMatchesExplicitMatrixProduct in 0.0066841 seconds
+   Running tTransform3D/composeAcceptsCellArrayAndSingleMatrix
+   Done tTransform3D/composeAcceptsCellArrayAndSingleMatrix in 0.018684 seconds
+   Running tTransform3D/composeAppliesTransformationsInArgumentOrder
+   Done tTransform3D/composeAppliesTransformationsInArgumentOrder in 0.058316 seconds
+   Running tTransform3D/rotationAndTranslationOrderChangesResult
+   Done tTransform3D/rotationAndTranslationOrderChangesResult in 0.024642 seconds
+   Running tTransform3D/composeRejectsEmptyAndInvalidMatrices
+   Done tTransform3D/composeRejectsEmptyAndInvalidMatrices in 0.033488 seconds
+   Running tTransform3D/combineAliasMatchesCompose
+   Done tTransform3D/combineAliasMatchesCompose in 0.0077772 seconds
+   Running tTransform3D/inverseReversesCombinedTransformation
+   Done tTransform3D/inverseReversesCombinedTransformation in 0.018498 seconds
+   Running tTransform3D/inverseRejectsSingularAndInvalidMatrices
+   Done tTransform3D/inverseRejectsSingularAndInvalidMatrices in 0.016064 seconds
+   Running tTransform3D/isAffineValidatesTolerance
+   Done tTransform3D/isAffineValidatesTolerance in 0.0077086 seconds
+   Running tTransform3D/transformMeshMovesIssue007CubeVertices
+   Done tTransform3D/transformMeshMovesIssue007CubeVertices in 0.036295 seconds
+   Running tTransform3D/transformMeshPreservesMeshMetadata
+   Done tTransform3D/transformMeshPreservesMeshMetadata in 0.082617 seconds
+   Running tTransform3D/transformMeshKeepsFaceConnectivity
+   Done tTransform3D/transformMeshKeepsFaceConnectivity in 0.048562 seconds
+   Running tTransform3D/transformMeshHandlesSphereWithoutCenterChange
+   Done tTransform3D/transformMeshHandlesSphereWithoutCenterChange in 0.030678 seconds
+   Running tTransform3D/transformMeshValidatesArguments
+   Done tTransform3D/transformMeshValidatesArguments in 0.031451 seconds
+  Tearing down tTransform3D
+  Done tearing down tTransform3D in 0.19025 seconds
+ Done tTransform3D in 1.4087 seconds
+__________
+
+ Running tValidator
+  Setting up tValidator
+  Done setting up tValidator in 0.27205 seconds
+   Running tValidator/acceptsCorrectPlacement
+   Done tValidator/acceptsCorrectPlacement in 0.031216 seconds
+   Running tValidator/rejectsIncorrectPlacement
+   Done tValidator/rejectsIncorrectPlacement in 0.0081372 seconds
+   Running tValidator/reportsUnknownObject
+   Done tValidator/reportsUnknownObject in 0.0060145 seconds
+   Running tValidator/reportsUnknownTarget
+   Done tValidator/reportsUnknownTarget in 0.0054505 seconds
+  Tearing down tValidator
+  Done tearing down tValidator in 0.15894 seconds
+ Done tValidator in 0.4818 seconds
+__________
+
+
+=== MATLAB TEST SUMMARY ===
+Total      : 204
+Passed     : 204
+Failed     : 0
+Incomplete : 0
+Duration   : 37.72 s
+===========================
+
+ans =
+
+  1204 TestResult array with properties:
+
+    Name
+    Passed
+    Failed
+    Incomplete
+    Duration
+    Details
+
+Totals:
+   204 Passed, 0 Failed, 0 Incomplete.
+   37.7172 seconds testing time.
+
