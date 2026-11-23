@@ -1,20 +1,15 @@
 {
   "id": "TASTE",
-  "title": "Taste Classification",
-  "targets": [
-    "sweet",
-    "sour",
-    "bitter",
-    "salty"
-  ],
+  "title": "Taste Sorting",
   "objects": [
-    { "id": "ice_cream", "name": "Ice Cream", "category": "Sweet", "target": "sweet" },
-    { "id": "lemon", "name": "Lemon", "category": "Sour", "target": "sour" },
-    { "id": "tomato", "name": "Tomato", "category": "Sour", "target": "sour" },
-    { "id": "garlic", "name": "Garlic", "category": "Bitter", "target": "bitter" },
-    { "id": "pizza", "name": "Pizza", "category": "Salty", "target": "salty" },
-    { "id": "coffee", "name": "Coffee", "category": "Bitter", "target": "bitter" },
-    { "id": "chips", "name": "Chips", "category": "Salty", "target": "salty" },
-    { "id": "donuts", "name": "Donuts", "category": "Sweet", "target": "sweet" }
-  ]
+    { "id": "food_honey", "target": "sweet" },
+    { "id": "food_banana", "target": "sweet" },
+    { "id": "food_lemon", "target": "sour" },
+    { "id": "food_green_apple", "target": "sour" },
+    { "id": "food_coffee", "target": "bitter" },
+    { "id": "food_cocoa", "target": "bitter" },
+    { "id": "food_olives", "target": "salty" },
+    { "id": "food_salt", "target": "salty" }
+  ],
+  "targets": ["sweet", "sour", "bitter", "salty"]
 }
